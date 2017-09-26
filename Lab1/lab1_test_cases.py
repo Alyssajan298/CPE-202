@@ -3,16 +3,16 @@ import lab1
 
 class TestLab1(unittest.TestCase):
 
-    # def test_max_list(self):
-    #     tlist = [10, 9, 8 ,4, 9]
-    #     self.assertEqual(lab1.max_list(tlist),10)
-    #     tlist = []
-    #     with self.assertRaises(ValueError):  # magic - uses context manager
-    #         lab1.max_list(tlist)  
+    def test_max_list(self):
+        tlist = [10, 9, 8 ,4, 9]
+        self.assertEqual(lab1.max_list_iter(tlist),10)
+        tlist = []
+        with self.assertRaises(ValueError):  # magic - uses context manager
+            lab1.max_list_iter(tlist)  
 
-    # def test_reverse_rec(self):
-    #     self.assertEqual(lab1.reverse_rec("abcd"),"dcba")
-    #     self.assertEqual(lab1.reverse_rec(""),"")
+    def test_reverse_rec(self):
+        self.assertEqual(lab1.reverse_rec("abcd"),"dcba")
+        self.assertEqual(lab1.reverse_rec(""),"")
         
     def test_bin_search(self):
         #Testing a normal list 
@@ -34,8 +34,7 @@ class TestLab1(unittest.TestCase):
         list_val = []
         low = 0 
         high = len(list_val)-1
-        with self.assertRaises(ValueError):
-            lab1.bin_search(21,low,high,list_val)
+        self.assertEqual(lab1.bin_search(21,low,high,list_val),None)
         #Testing when target is in lower half 
         list_val =[1,2,3,4,7,8,9,10]
         low = 0
