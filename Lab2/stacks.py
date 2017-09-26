@@ -17,12 +17,12 @@ class StackArray:
 			return False
 	def push(self, item):
 		if self.num_items==self.capacity:
-			raise ValueError('The Stack is Full')
+			raise IndexError('The Stack is Full')
 		self.items[self.num_items]=item
 		self.num_items+=1		
 	def pop(self):
 		if self.num_items == 0:
-			raise ValueError('The Stack is Empty')
+			raise IndexError('The Stack is Empty')
 		popped = self.items[self.num_items-1]
 		self.num_items-=1
 		return popped
@@ -54,7 +54,7 @@ class StackLinked:
 	def push(self,data):
 		newNode = Node(data)
 		if self.count == self.capacity:
-			raise ValueError('The Stack is Full')
+			raise IndexError('The Stack is Full')
 		if self.count== 0:
 			newNode.setNext(None)
 		newNode.setNext(self.top)
@@ -62,7 +62,7 @@ class StackLinked:
 		self.count+=1
 	def pop(self):
 		if self.count == 0:
-			raise ValueError('The Stack is Empty')
+			raise IndexError('The Stack is Empty')
 		temp = self.top.getData()
 
 		self.top = (self.top.getNext())

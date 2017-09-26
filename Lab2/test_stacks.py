@@ -14,7 +14,7 @@ class TestStacks(unittest.TestCase):
 		arrStack.push(3)
 		arrStack.push(4)
 		arrStack.push(5)
-		with self.assertRaises(ValueError): #Test if error is raised when going passed capacity
+		with self.assertRaises(IndexError): #Test if error is raised when going passed capacity
 			arrStack.push(6) 
 		self.assertEqual(arrStack.size(),5) 
 		self.assertEqual(arrStack.is_full(), True) #Test when stack is full will confirm
@@ -23,13 +23,13 @@ class TestStacks(unittest.TestCase):
 		self.assertEqual(arrStack.peek(),4) #Test new top of stack
 		
 		arrStack2 = stacks.StackArray(3)
-		with self.assertRaises(ValueError):
+		with self.assertRaises(IndexError):
 			arrStack2.pop() #Test to pop an empty stack
 		self.assertEqual(arrStack2.size(),0)#Test to return size of empty stack
 
 	def test_StackLinked(self):
 		nodestack = stacks.StackLinked(3) #Create Stacked Linked List
-		with self.assertRaises(ValueError): #Tests Error, cannot pop an empty stack
+		with self.assertRaises(IndexError): #Tests Error, cannot pop an empty stack
 			nodestack.pop()
 		self.assertEqual(nodestack.is_empty(), True) #Tests if the stack is empty
 		self.assertEqual(nodestack.size(), 0) #Tests if the size of the stack is 0
@@ -50,7 +50,7 @@ class TestStacks(unittest.TestCase):
 		nodestack.push(21)
 		self.assertEqual(nodestack.size(), 3)
 		self.assertEqual(nodestack.is_full(), True)#Tests when the Stack is full 
-		with self.assertRaises(ValueError): #Tests pushing additional item after it is full
+		with self.assertRaises(IndexError): #Tests pushing additional item after it is full
 			nodestack.push(12)
 		
 	
