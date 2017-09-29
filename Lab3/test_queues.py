@@ -42,7 +42,9 @@ class TestLab3(unittest.TestCase):
 		q1.enqueue(2)
 		self.assertEqual(q1.num_in_queue(),2) #Checks the number of items in Queue
 		q1.enqueue(3)
+		self.assertEqual(q1.rear.getData(),3)  #Checks if rear changed after enqueue
 		q1.enqueue(4)
+		self.assertEqual(q1.rear.getData(),4)  #Checks if rear did not change after dequeue
 		with self.assertRaises(IndexError): #Checks if raises IndexError when enqueuing a full Queue
 			q1.enqueue(5)
 		self.assertEqual(q1.is_full(),True) #Checks is_full method on a Queue when all slots are occupied by elements
@@ -50,6 +52,11 @@ class TestLab3(unittest.TestCase):
 		self.assertEqual(q1.dequeue(),1) #Checks dequeue 
 		self.assertEqual(q1.num_in_queue(),3) #Checks the number of items in Queue after calling dequeue
 		self.assertEqual(q1.front.getData(), 2) #Checks if front changed after dequeue
+		self.assertEqual(q1.dequeue(),2) #Checks dequeue 
+		self.assertEqual(q1.is_empty(),False) #Checks is_empty method 
+		self.assertEqual(q1.num_in_queue(),2) #Checks the number of items in Queue after calling dequeue
+		self.assertEqual(q1.front.getData(),3)  #Checks if front changed after dequeue
+		self.assertEqual(q1.rear.getData(),4)  #Checks if rear did not chang after dequeue
 
 
 if __name__=="__main__":
