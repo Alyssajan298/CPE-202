@@ -25,7 +25,7 @@ class TestLab3(unittest.TestCase):
 		self.assertEqual(q1.num_in_queue(),4) #Checks the number of items in Queue
 		q1.dequeue()
 		self.assertEqual(q1.front,2) #Checks front on Queue after dequeue called
-	   	self.assertEqual(q1.num_in_queue(),3) #Checks the number of items in Queue after calling dequeue
+		self.assertEqual(q1.num_in_queue(),3) #Checks the number of items in Queue after calling dequeue
 
 	def test_QueueLinked(self):
 		q1 = queues.QueueLinked(4)
