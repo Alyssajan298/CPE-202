@@ -1,0 +1,45 @@
+import unittest
+from ordered_list import *
+class Test_OrderedList(unittest.TestCase):
+	def test_add0(self):
+		g = OrderedList()
+		g.add(1)
+		self.assertEquals(g.head.getData(),1)
+		self.assertEquals(g.tail.getData(),1)
+		self.assertEquals(g.size(),1)
+		g.add(0)
+		self.assertEquals(g.head.getData(),0)
+		self.assertEquals(g.tail.getData(),1)
+		self.assertEquals(g.size(),2)
+		g.add(2)
+		self.assertEquals(g.head.getData(),0)
+		self.assertEquals(g.tail.getData(),2)
+		self.assertEquals(g.size(),3)
+	def test_add1(self):
+		h = OrderedList()
+		h.add(1)
+		h.add(2)
+		self.assertEquals(h.head.getData(),1)
+		self.assertEquals(h.tail.getData(),2)
+		self.assertEquals(h.size(),2)
+		h.add(0)
+		self.assertEquals(h.head.getData(),0)
+		self.assertEquals(h.size(),3)
+		h.add(4)
+		self.assertEquals(h.tail.getData(),4)
+		self.assertEquals(h.size(),4)
+		h.add(3)
+		self.assertEquals(h.tail.getPrev().getData(),3)
+		self.assertEquals(h.head.getNext().getData(),1)
+		self.assertEquals(h.size(),5)
+		h.add(0.5)
+		self.assertEquals(h.head.getNext().getData(),0.5)
+		self.assertEquals(h.head.getNext().getNext().getData(),1)
+		self.assertEquals(h.head.getNext().getNext().getNext().getData(),2)
+		self.assertEquals(h.head.getNext().getNext().getNext().getNext().getData(),3)
+		self.assertEquals(h.head.getNext().getNext().getNext().getNext().getNext().getData(),4)
+		self.assertEquals(h.size(),6)
+if __name__ == "__main__":
+	unittest.main()
+
+
