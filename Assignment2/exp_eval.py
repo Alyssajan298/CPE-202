@@ -13,7 +13,7 @@ def infix_to_postfix(infixexpr):
     x = 0
     par = 0 
     while x < len(tokenList): 
-        if tokenList[x] is ('('):
+        if tokenList[x] is ('('): #When encountering paranthesis in the input
             newStack.push(tokenList[x])
             par = x+1
             while par < len(tokenList) and tokenList[par] not in (')'):
@@ -51,16 +51,16 @@ def infix_to_postfix(infixexpr):
                             postfixList.append(newStack.pop())
                         newStack.push(tokenList[par])
                 par+=1
-            while newStack.peek() not in ('('):
+            while newStack.peek() not in ('('): #Popping and appending remaining symbols to list
                 postfixList.append(newStack.pop())
-            newStack.pop()
+            newStack.pop() #Removing the ( that was pushed onto the Stack
 
                 
             x = par
 
                      
         
-        elif tokenList[x] not in ('*','-','/','+','^','(',')'):
+        elif tokenList[x] not in ('*','-','/','+','^','(',')'): #Encountering a non paranthesis
             postfixList.append(tokenList[x])
         elif tokenList[x] in ('^'):
             if newStack.is_empty():
@@ -94,13 +94,13 @@ def infix_to_postfix(infixexpr):
                     postfixList.append(newStack.pop())
                 newStack.push(tokenList[x])
         x+=1
-    while not newStack.is_empty():
+    while not newStack.is_empty(): #Popping and appending remaining symbols to list
         postfixList.append(newStack.pop())
-    return " ".join(postfixList)
+    return " ".join(postfixList) #Creates the Postfix Expression by joining the list
 
 
 def postfix_eval(postfixExpr):
-    """ Takes in Postfix Expression and evaluates"""
+    """ Takes in a valid Postfix Expression and evaluates using the helper function doMath(op,op1,op2)"""
     newStack = StackArray(30)
     postfix = postfixExpr.split()
     for x in postfix:
@@ -113,6 +113,7 @@ def postfix_eval(postfixExpr):
 
 def doMath(op, op1, op2):
     """ Evaluates Math Expressions for postfix_eval """
+    '''op is the operator, op2 is the first operand, op1 is the second operand'''
     if op == '*':
         return  op2 * op1
     elif op == '-':
@@ -128,7 +129,7 @@ def doMath(op, op1, op2):
 
 
 def postfix_valid(postfixexpr):
-    """ Tests to see that an input is a solvable postfix expressiojn"""
+    """ Tests to see if the given Postfix Expression is a solvable and valid postfix expression"""
     counter = 0
     if postfixexpr == "":
         return False
