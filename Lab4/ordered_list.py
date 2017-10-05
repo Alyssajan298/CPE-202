@@ -50,7 +50,17 @@ class OrderedList():
     def size(self):
         return self.capacity
     
-    # def index(item):
+    def index(self,item):
+    	index = 0
+    	start = self.head
+    	while index < self.capacity:
+    		if start.getData() == item:
+    			return index
+    		else:
+    			start= start.getNext()
+    			index += 1
+
+
     
     # def pop():
     
