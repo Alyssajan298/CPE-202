@@ -44,7 +44,8 @@ class OrderedList():
     
     # def search_backward(item):
     
-    # def is_empty():
+    def is_empty(self):
+    	return self.capacity == 0
     
     def size(self):
         return self.capacity

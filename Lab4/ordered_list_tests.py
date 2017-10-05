@@ -4,7 +4,9 @@ class Test_OrderedList(unittest.TestCase):
 	''' Tests the add function '''
 	def test_add0(self):
 		g = OrderedList()
+		self.assertTrue(g.is_empty(),True)
 		g.add(1)
+		self.assertFalse(g.is_empty(),False)
 		self.assertEqual(g.head.getData(),1)
 		self.assertEqual(g.tail.getData(),1)
 		self.assertEqual(g.size(),1)
@@ -19,8 +21,10 @@ class Test_OrderedList(unittest.TestCase):
 	''' Tests the add function with end cases (head and tail exceptions) '''
 	def test_add1(self):
 		h = OrderedList()
+		self.assertTrue(h.is_empty(),True)
 		h.add(1)
 		h.add(2)
+		self.assertFalse(h.is_empty(),False)
 		self.assertEqual(h.head.getData(),1)
 		self.assertEqual(h.tail.getData(),2)
 		self.assertEqual(h.size(),2)
