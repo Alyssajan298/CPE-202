@@ -94,21 +94,21 @@ def infix_to_postfix(infixexpr):
 			if newStack.is_empty():
 				newStack.push(tokenList[x])
 			elif newStack.peek() in ('^'):
-					postfixList.append(newStack.pop())
-					newStack.push(tokenList[x])
-			elif newStack.peek() in ('+','-'):
-					newStack.push(tokenList[x])
-			elif newStack.peek() in ('*','/'):
-					postfixList.append(newStack.pop())
-					newStack.push(tokenList[x])
-		elif tokenList[x] in ('+','-'):
-			 if newStack.is_empty():
+				postfixList.append(newStack.pop())
 				newStack.push(tokenList[x])
-			 elif newStack.peek() in ('^','*','/'):
+			elif newStack.peek() in ('+','-'):
+				newStack.push(tokenList[x])
+			elif newStack.peek() in ('*','/'):
+				postfixList.append(newStack.pop())
+				newStack.push(tokenList[x])
+		elif tokenList[x] in ('+','-'):
+			if newStack.is_empty():
+				newStack.push(tokenList[x])
+			elif newStack.peek() in ('^','*','/'):
 				while newStack.peek() in ('^','*','/') or not newStack.is_empty():
 					postfixList.append(newStack.pop())
 				newStack.push(tokenList[x])
-			 elif newStack.peek() in ('+','-'):
+			elif newStack.peek() in ('+','-'):
 				while newStack.peek() in ('+','-'):
 					postfixList.append(newStack.pop())
 				newStack.push(tokenList[x])
