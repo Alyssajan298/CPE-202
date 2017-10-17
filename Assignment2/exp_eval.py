@@ -140,7 +140,7 @@ def doMath(op, op1, op2):
 	elif op == '/':
 		if op1 == 0:
 			raise ValueError
-		return  op2 / op1
+		return ( op2 / op1)
 	elif op == '+':
 		return  op2 + op1
 	elif op == '^':
