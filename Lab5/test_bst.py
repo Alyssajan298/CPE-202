@@ -10,16 +10,16 @@ class testing_queues(unittest.TestCase):
 		t.insert(2)
 		t.insert(0.5)
 		t.insert(2.5)
-		# print ("Tree after inserting 8, 3, 10, 1")
-		# t.root.inorder_print_tree()
+		print ("Tree after inserting 3,10,1,2,0.5,2.5")
+		t.root.inorder_print_tree()
 		t.insert(6)
 		t.insert(4)
 		t.insert(7)
 		t.insert(14)
 		t.insert(13)
-		# print ("Tree after inserting 6, 4, 7, 14, 13")
-		# t.root.inorder_print_tree()
-		# t.root.right.inorder_print_tree()
+		print ("Tree after inserting 6, 4, 7, 14, 13")
+		t.root.inorder_print_tree()
+		t.root.right.inorder_print_tree()
 
 
 		self.assertTrue(t.root.parent is None)
@@ -28,9 +28,9 @@ class testing_queues(unittest.TestCase):
 		t.root.print_levels()
 		print ("~~ ~~")
 
-		# print ("~~ LEVELS: ~~")
-		# t.root.right.print_levels()
-		# print ("~~ ~~")
+		print ("~~ LEVELS (Right): ~~")
+		t.root.right.print_levels()
+		print ("~~ ~~")
 
 
 		"""Testing find 14"""

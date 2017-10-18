@@ -54,7 +54,6 @@ class TreeNode:
 	def print_levels(self):
 		if (self.left != None):
 			self.left.print_levels()
-
 		count = 0
 		start = self
 		while start.parent != None:
@@ -67,8 +66,8 @@ class TreeNode:
 				count+=1
 				start = start.right
 
-		# print "Value:",self.key,"Level:",count
-		print [self.key,count]
+		# print ("Value:",self.key,"Level:",count)
+		print ([self.key,count])
 		if (self.right != None):
 			self.right.print_levels()
 class BinarySearchTree:
