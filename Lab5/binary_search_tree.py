@@ -24,6 +24,7 @@ class TreeNode:
 		else:
 			self.key = key
 	def find_successor(self):
+		""" Finds the next successor of a TreeNode """
 		if self.right == None:
 			return self
 		current = self.right
