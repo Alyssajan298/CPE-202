@@ -30,28 +30,47 @@ class TreeNode:
 		current = self.right
 		while current.left != None:
 			current = current.left
-
 		return current
-
-
-
-
 	def find_min(self):
-		None
+		current = self
+		while current.left != None:
+			current = current.left
+		return current.key
 	def find_max(self):
-		None
+		current = self
+		while current.right != None:
+			current = current.right
+		return current.key
 	def inorder_print_tree(self):
 		"""   Print tree content inorder        """
 
 		if (self.left != None):
-			self.left.print_tree()
+			self.left.inorder_print_tree()
 
 		print(self.key)
 
 		if (self.right != None):
-			self.right.print_tree()
+			self.right.inorder_print_tree()
 	def print_levels(self):
-		None
+		if (self.left != None):
+			self.left.print_levels()
+
+		count = 0
+		start = self
+		while start.parent != None:
+			start = start.parent
+		while self.key is not start.key:
+			if self.key < start.key:
+				count+=1
+				start = start.left
+			else:
+				count+=1
+				start = start.right
+
+		# print "Value:",self.key,"Level:",count
+		print [self.key,count]
+		if (self.right != None):
+			self.right.print_levels()
 class BinarySearchTree:
 	def __init__(self):
 		self.root = None
@@ -80,12 +99,13 @@ class BinarySearchTree:
 					p.left.parent = p
 				else:
 					p.left.insert(newKey)
-					p.right.parent = p
 			else:
 				if p.right is None:
 					p.right = TreeNode(newKey)
+					p.right.parent = p
 				else:
 					p.right.insert(newKey)
+
 
 	def delete(self,key):
 		None
