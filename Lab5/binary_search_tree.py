@@ -12,17 +12,29 @@ class TreeNode:
 			if key < self.key:
 				if self.left is None:
 					self.left = TreeNode(key)
+					self.left.parent = self
 				else:
 				   self.left.insert(key)
 			elif key > self.key:
 				if self.right is None:
 					self.right = TreeNode(key)
+					self.right.parent = self
 				else:
 					self.right.insert(key)
 		else:
 			self.key = key
 	def find_successor(self):
-		None
+		if self.right == None:
+			return self
+		current = self.right
+		while current.left != None:
+			current = current.left
+
+		return current
+
+
+
+
 	def find_min(self):
 		None
 	def find_max(self):
@@ -32,9 +44,9 @@ class TreeNode:
 
 		if (self.left != None):
 			self.left.print_tree()
-			
+
 		print(self.key)
-		
+
 		if (self.right != None):
 			self.right.print_tree()
 	def print_levels(self):
@@ -51,7 +63,7 @@ class BinarySearchTree:
 				p = p.right
 
 		if p is None :
-			return False	    
+			return False
 		else:
 			return True     # might want to return the node or ???
 
@@ -61,11 +73,13 @@ class BinarySearchTree:
 			return
 		else:
 			p = self.root
-			if p.key > newkey:
+			if p.key > newKey:
 				if p.left is None:
 					p.left = TreeNode(newKey)
+					p.left.parent = p
 				else:
 					p.left.insert(newKey)
+					p.right.parent = p
 			else:
 				if p.right is None:
 					p.right = TreeNode(newKey)
