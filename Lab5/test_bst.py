@@ -2,44 +2,58 @@ import unittest
 from binary_search_tree import *
 
 class testing_queues(unittest.TestCase):
-	def test_given(self):
+	# def test_given(self):
+	# 	t = BinarySearchTree()
+	# 	t.insert(3)
+	# 	t.insert(10)
+	# 	t.insert(1)
+	# 	t.insert(2)
+	# 	t.insert(0.5)
+	# 	t.insert(2.5)
+	# 	print ("Tree after inserting 3,10,1,2,0.5,2.5")
+	# 	t.root.inorder_print_tree()
+	# 	t.insert(6)
+	# 	t.insert(4)
+	# 	t.insert(7)
+	# 	t.insert(14)
+	# 	t.insert(13)
+	# 	print ("Tree after inserting 6, 4, 7, 14, 13")
+	# 	t.root.inorder_print_tree()
+	# 	t.root.right.inorder_print_tree()
+	# 	self.assertTrue(t.root.parent is None)
+	# 	print ("~~ LEVELS: ~~")
+	# 	t.root.print_levels()
+	# 	print ("~~ ~~")
+	# 	print ("~~ LEVELS (Right): ~~")
+	# 	t.root.right.print_levels()
+	# 	print ("~~ ~~")
+	# 	t.print_tree()
+	# 	"""Testing find 14"""
+	# 	self.assertTrue(t.find(14))
+	# 	"""Testing find 15"""
+	# 	self.assertFalse(t.find(15))
+	# 	"""Testing finding root"""
+	# 	self.assertTrue(t.find(t.root.key))
+	# def test_delete_empty_noChild(self):
+	# 	t = BinarySearchTree()
+	# 	self.assertTrue(t.is_empty())
+	# 	t.insert(10)
+	# 	self.assertFalse(t.is_empty())
+	# 	t.insert(3)
+	# 	t.insert(21)
+	# 	t.root.inorder_print_tree()
+	# 	t.delete(21)
+	# 	t.print_tree()
+	# 	t.delete(3)
+	# 	t.print_tree()
+	# 	t.delete(10)
+	# 	self.assertTrue(t.is_empty())
+	def test_delete_empty_oneChild(self):
 		t = BinarySearchTree()
-		t.insert(3)
 		t.insert(10)
-		t.insert(1)
-		t.insert(2)
-		t.insert(0.5)
-		t.insert(2.5)
-		print ("Tree after inserting 3,10,1,2,0.5,2.5")
-		t.root.inorder_print_tree()
-		t.insert(6)
-		t.insert(4)
-		t.insert(7)
-		t.insert(14)
-		t.insert(13)
-		print ("Tree after inserting 6, 4, 7, 14, 13")
-		t.root.inorder_print_tree()
-		t.root.right.inorder_print_tree()
-
-
-		self.assertTrue(t.root.parent is None)
-
-		print ("~~ LEVELS: ~~")
-		t.root.print_levels()
-		print ("~~ ~~")
-
-		print ("~~ LEVELS (Right): ~~")
-		t.root.right.print_levels()
-		print ("~~ ~~")
-
-
-		"""Testing find 14"""
-		self.assertTrue(t.find(14))
-		"""Testing find 15"""
-		self.assertFalse(t.find(15))
-		"""Testing finding root"""
-		self.assertTrue(t.find(t.root.key))
-
+		t.insert(3)
+		t.insert(21)
+		t.insert(27)
 	def test_find_successor(self):
 		t = BinarySearchTree()
 		t.insert(3)

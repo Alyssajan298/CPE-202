@@ -32,11 +32,13 @@ class TreeNode:
 			current = current.left
 		return current
 	def find_min(self):
+		""" Finds the smallest key value of the Tree """
 		current = self
 		while current.left != None:
 			current = current.left
 		return current.key
 	def find_max(self):
+		""" Finds the largest key value of the Tree """
 		current = self
 		while current.right != None:
 			current = current.right
@@ -52,6 +54,7 @@ class TreeNode:
 		if (self.right != None):
 			self.right.inorder_print_tree()
 	def print_levels(self):
+		""" Print [key, level of node] inorder """
 		if (self.left != None):
 			self.left.print_levels()
 		count = 0
@@ -65,8 +68,6 @@ class TreeNode:
 			else:
 				count+=1
 				start = start.right
-
-		# print ("Value:",self.key,"Level:",count)
 		print ([self.key,count])
 		if (self.right != None):
 			self.right.print_levels()
@@ -74,6 +75,7 @@ class BinarySearchTree:
 	def __init__(self):
 		self.root = None
 	def find(self, key):
+		""" Finds given key value and returns True/False whether if in Tree """
 		p = self.root      # current node
 		while p is not None and p.key != key :
 			if key < p.key:
@@ -87,6 +89,7 @@ class BinarySearchTree:
 			return True     # might want to return the node or ???
 
 	def insert(self,newKey):
+		""" Beginning of insert function to input nodes onto Tree """
 		if self.root is None:			 # if tree is empty
 			self.root = TreeNode(newKey)
 			return
@@ -107,8 +110,32 @@ class BinarySearchTree:
 
 
 	def delete(self,key):
-		None
+		""" Deletes TreeNodes according to key value. """
+		p = self.root      # current node
+		while p.key != key :
+			if key < p.key:
+				p = p.left
+			else:
+				p = p.right
+		#NoChild Case
+		if p.left == None and p.right == None:
+				if key == self.root.key:
+					self.root = None
+				elif p.parent.left== p:
+					p.parent.left = None
+				else:
+					p.parent.right = None
+
 	def print_tree(self):
-		None
+		""" Prints the entire tree inorder """
+		root = self.root
+		if (root.left != None):
+			root.left.inorder_print_tree()
+
+		print(root.key)
+
+		if (root.right != None):
+			root.right.inorder_print_tree()
 	def is_empty(self):
-		None
+		""" Returns True/False if Tree is empty """
+		return self.root == None
