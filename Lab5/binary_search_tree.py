@@ -55,12 +55,14 @@ class TreeNode:
 			self.right.inorder_print_tree()
 	def print_levels(self):
 		""" Print [key, level of node] inorder """
-		if (self.left != None):
-			self.left.print_levels()
-		count = 0
 		start = self
 		while start.parent != None:
 			start = start.parent
+
+		if (self.left != None) and self.left.key is not start.key:
+			self.left.print_levels()
+		count = 0
+		
 		while self.key is not start.key:
 			if self.key < start.key:
 				count+=1
@@ -69,7 +71,7 @@ class TreeNode:
 				count+=1
 				start = start.right
 		print ([self.key,count])
-		if (self.right != None):
+		if (self.right != None)  and self.right.key is not start.key:
 			self.right.print_levels()
 class BinarySearchTree:
 	def __init__(self):
@@ -108,18 +110,21 @@ class BinarySearchTree:
 				else:
 					p.right.insert(newKey)
 
-
 	def delete(self,key):
-		""" Deletes TreeNodes according to key value. """
-		p = self.root      # current node
+		p = self.root
 		while p.key != key :
 			if key < p.key:
 				p = p.left
 			else:
 				p = p.right
+		self.delete_node(p)
+
+	def delete_node(self,p):
+		print("^^^&#W*&")
+		""" Deletes TreeNodes according to key value. """
 		#NoChild Case
 		if p.left == None and p.right == None:
-			if key == self.root.key:
+			if p.key == self.root.key:
 				self.root = None
 			elif p.parent.left== p:
 				p.parent.left = None
@@ -127,7 +132,8 @@ class BinarySearchTree:
 				p.parent.right = None
 		#OneChild Case
 		elif p.left == None or p.right == None:
-			if key == self.root.key:
+			if p.key == self.root.key:
+				print ("@@@")
 				if self.root.left != None:
 					self.root = self.root.left
 					self.root.parent= None
@@ -148,18 +154,22 @@ class BinarySearchTree:
 					p.parent.left = p.right
 		#TwoChild Case
 		else:
-			if key == self.root.key:
+			if p.key == self.root.key:
+				print("??")
+				print(p.left.key)
+				print(p.right.key)
 				temp = self.root.find_successor()
-				self.delete(self.root.find_successor().key)
-				saveleft= self.root.left
-				saveright= self.root.right
-				self.root = temp
-				self.root.left=saveleft
-				self.root.right=saveright
-				self.root.parent= None
+				self.delete_node(temp)
+				p.key = temp.key
+				# saveleft= self.root.left
+				# saveright= self.root.right
+				# self.root = temp
+				# self.root.left=saveleft
+				# self.root.right=saveright
+				# self.root.parent= None
 			else:
 				temp = p.find_successor()
-				self.delete(p.find_successor().key)
+				self.delete_node(p.find_successor())
 				saveleft = p.left
 				saveright = p.right
 				temp.parent = p.parent
