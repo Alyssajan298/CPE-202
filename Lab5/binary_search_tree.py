@@ -133,6 +133,7 @@ class BinarySearchTree:
 		#OneChild Case
 		elif p.left == None or p.right == None:
 			if p.key == self.root.key:
+				print ("@@@")
 				if self.root.left != None:
 					self.root = self.root.left
 					self.root.parent= None
@@ -154,14 +155,18 @@ class BinarySearchTree:
 		#TwoChild Case
 		else:
 			if p.key == self.root.key:
+				print("??")
+				print(p.left.key)
+				print(p.right.key)
 				temp = self.root.find_successor()
-				self.delete_node(self.root.find_successor())
-				saveleft= self.root.left
-				saveright= self.root.right
-				self.root = temp
-				self.root.left=saveleft
-				self.root.right=saveright
-				self.root.parent= None
+				self.delete_node(temp)
+				p.key = temp.key
+				# saveleft= self.root.left
+				# saveright= self.root.right
+				# self.root = temp
+				# self.root.left=saveleft
+				# self.root.right=saveright
+				# self.root.parent= None
 			else:
 				temp = p.find_successor()
 				self.delete_node(p.find_successor())
