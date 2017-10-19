@@ -130,8 +130,10 @@ class BinarySearchTree:
 			if key == self.root.key:
 				if self.root.left != None:
 					self.root = self.root.left
+					self.root.parent= None
 				else:
 					self.root = self.root.right
+					self.root.parent= None
 			elif p.left != None:
 				p.left.parent = p.parent
 				if p == p.parent.left:
@@ -154,6 +156,7 @@ class BinarySearchTree:
 				self.root = temp
 				self.root.left=saveleft
 				self.root.right=saveright
+				self.root.parent= None
 			else:
 				temp = p.find_successor()
 				self.delete(p.find_successor().key)
