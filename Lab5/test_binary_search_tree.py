@@ -185,11 +185,13 @@ class testing_queues(unittest.TestCase):
 
 		self.assertTrue(t.find(100))
 		t.delete(100)
-		self.assertFalse(t.find(100))
+		
 
 		print ("~~ LEVELS: ~~")
 		t.root.print_levels()
 		print ("~~ ~~")
+
+		self.assertFalse(t.find(100))
 
 	def printTestStart(self,msg):
 		'''Is called by each of the tests to make test output more readable'''

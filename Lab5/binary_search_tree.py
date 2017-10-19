@@ -55,12 +55,14 @@ class TreeNode:
 			self.right.inorder_print_tree()
 	def print_levels(self):
 		""" Print [key, level of node] inorder """
-		if (self.left != None):
-			pass#self.left.print_levels()
-		count = 0
 		start = self
 		while start.parent != None:
 			start = start.parent
+
+		if (self.left != None) and self.left.key is not start.key:
+			self.left.print_levels()
+		count = 0
+		
 		while self.key is not start.key:
 			if self.key < start.key:
 				count+=1
@@ -69,8 +71,8 @@ class TreeNode:
 				count+=1
 				start = start.right
 		print ([self.key,count])
-		if (self.right != None):
-			pass#self.right.print_levels()
+		if (self.right != None)  and self.right.key is not start.key:
+			self.right.print_levels()
 class BinarySearchTree:
 	def __init__(self):
 		self.root = None
