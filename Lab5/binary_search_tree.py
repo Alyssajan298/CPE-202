@@ -136,13 +136,13 @@ class BinarySearchTree:
 					self.root.parent= None
 			elif p.left != None:
 				p.left.parent = p.parent
-				if p == p.parent.left:
+				if p.key < p.parent.key:
 					p.parent.left = p.left
 				else:
 					p.parent.right = p.left
 			else:
 				p.right.parent = p.parent
-				if p == p.parent.right:
+				if p.key > p.parent.key:
 					p.parent.right = p.right
 				else:
 					p.parent.left = p.right
