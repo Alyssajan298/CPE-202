@@ -48,12 +48,90 @@ class testing_queues(unittest.TestCase):
 	# 	t.print_tree()
 	# 	t.delete(10)
 	# 	self.assertTrue(t.is_empty())
-	def test_delete_empty_oneChild(self):
+	# def test_delete_empty_oneChild(self):
+		# t = BinarySearchTree()
+		# t.insert(10)
+		# t.insert(3)
+		# t.insert(21)
+		# t.insert(27)
+		# print t.root.right.key
+		# print t.root.right.right.key
+		# print t.root.right.right.parent.key
+		# t.delete(21)
+		# print t.root.right.key
+		# print t.root.right.parent.key
+		# tr = BinarySearchTree()
+		# tr.insert(10)
+		# tr.insert(3)
+		# tr.insert(21)
+		# tr.insert(27)
+		# tr.insert(1)
+		# tr.print_tree()
+		# tr.delete(3)
+		# tr.print_tree()
+		# print tr.root.left.key
+		# print tr.root.left.parent.key
+		# tre = BinarySearchTree()
+		# tre.insert(10)
+		# tre.insert(21)
+		# tre.insert(27)
+		# tre.print_tree()
+		# tre.delete(10)
+		# tre.print_tree()
+		# print tre.root.key
+		# tree = BinarySearchTree()
+		# tree.insert(10)
+		# tree.insert(3)
+		# tree.insert(1)
+		# tree.print_tree()
+		# tree.delete(10)
+		# tree.print_tree()
+		# print tree.root.key
+	def test_delete_empty_twoChild(self):
+		# t = BinarySearchTree()
+		# t.insert(10)
+		# t.insert(21)
+		# t.insert(27)
+		# t.insert(3)
+		# t.insert(1)
+		# t.insert(16)
+		# t.insert(4)
+		# print '                     ', t.root.key
+		# print '                    ',t.root.left.key,t.root.right.key
+		# print '                  ',t.root.left.left.key,t.root.left.right.key,t.root.right.left.key,t.root.right.right.key
+		# t.delete(10)
+		#
+		# print '                     ', t.root.key
+		# print '                    ',t.root.left.key,t.root.right.key
+		# print '                  ',t.root.left.left.key,t.root.left.right.key,' ' ,t.root.right.right.key
 		t = BinarySearchTree()
 		t.insert(10)
-		t.insert(3)
 		t.insert(21)
 		t.insert(27)
+		t.insert(3)
+		t.insert(1)
+		t.insert(16)
+		t.insert(5)
+		t.insert(0)
+		t.insert(2)
+		t.insert(4)
+		t.insert(6)
+		t.insert(14)
+		t.insert(20)
+		t.insert(23)
+		t.insert(30)
+		print ('                     ', t.root.key)
+		print ('                    ',t.root.left.key,t.root.right.key)
+		print ('                  ',t.root.left.left.key,t.root.left.right.key,t.root.right.left.key,t.root.right.right.key)
+		print ('             ', t.root.left.left.left.key, t.root.left.left.right.key, t.root.left.right.left.key, t.root.left.right.right.key, t.root.right.left.left.key, t.root.right.left.right.key, t.root.right.right.left.key, t.root.right.right.right.key)
+
+
+		t.delete(16)
+		print ('                     ', t.root.key)
+		print ('                    ',t.root.left.key,t.root.right.key)
+		print ('                  ',t.root.left.left.key,t.root.left.right.key,t.root.right.left.key,t.root.right.right.key)
+		print ('             ', t.root.left.left.left.key, t.root.left.left.right.key, t.root.left.right.left.key, t.root.left.right.right.key, t.root.right.left.left.key,t.root.right.right.left.key, t.root.right.right.right.key)
+
 	def test_find_successor(self):
 		t = BinarySearchTree()
 		t.insert(3)

@@ -119,13 +119,54 @@ class BinarySearchTree:
 				p = p.right
 		#NoChild Case
 		if p.left == None and p.right == None:
-				if key == self.root.key:
-					self.root = None
-				elif p.parent.left== p:
-					p.parent.left = None
+			if key == self.root.key:
+				self.root = None
+			elif p.parent.left== p:
+				p.parent.left = None
+			else:
+				p.parent.right = None
+		#OneChild Case
+		elif p.left == None or p.right == None:
+			if key == self.root.key:
+				if self.root.left != None:
+					self.root = self.root.left
 				else:
-					p.parent.right = None
-
+					self.root = self.root.right
+			elif p.left != None:
+				p.left.parent = p.parent
+				if p == p.parent.left:
+					p.parent.left = p.left
+				else:
+					p.parent.right = p.left
+			else:
+				p.right.parent = p.parent
+				if p == p.parent.right:
+					p.parent.right = p.right
+				else:
+					p.parent.left = p.right
+		#TwoChild Case
+		else:
+			if key == self.root.key:
+				temp = self.root.find_successor()
+				self.delete(self.root.find_successor().key)
+				saveleft= self.root.left
+				saveright= self.root.right
+				self.root = temp
+				self.root.left=saveleft
+				self.root.right=saveright
+			else:
+				temp = p.find_successor()
+				self.delete(p.find_successor().key)
+				saveleft = p.left
+				saveright = p.right
+				temp.parent = p.parent
+				if p.parent.right == p:
+					p.parent.right = temp
+				else:
+					p.parent.left = temp
+				p = temp
+				p.left = saveleft
+				p.right = saveright
 	def print_tree(self):
 		""" Prints the entire tree inorder """
 		root = self.root
