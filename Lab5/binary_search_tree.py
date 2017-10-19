@@ -56,7 +56,7 @@ class TreeNode:
 	def print_levels(self):
 		""" Print [key, level of node] inorder """
 		if (self.left != None):
-			self.left.print_levels()
+			pass#self.left.print_levels()
 		count = 0
 		start = self
 		while start.parent != None:
@@ -70,7 +70,7 @@ class TreeNode:
 				start = start.right
 		print ([self.key,count])
 		if (self.right != None):
-			self.right.print_levels()
+			pass#self.right.print_levels()
 class BinarySearchTree:
 	def __init__(self):
 		self.root = None
@@ -108,18 +108,21 @@ class BinarySearchTree:
 				else:
 					p.right.insert(newKey)
 
-
 	def delete(self,key):
-		""" Deletes TreeNodes according to key value. """
-		p = self.root      # current node
+		p = self.root
 		while p.key != key :
 			if key < p.key:
 				p = p.left
 			else:
 				p = p.right
+		self.delete_node(p)
+
+	def delete_node(self,p):
+		print("^^^&#W*&")
+		""" Deletes TreeNodes according to key value. """
 		#NoChild Case
 		if p.left == None and p.right == None:
-			if key == self.root.key:
+			if p.key == self.root.key:
 				self.root = None
 			elif p.parent.left== p:
 				p.parent.left = None
@@ -127,7 +130,7 @@ class BinarySearchTree:
 				p.parent.right = None
 		#OneChild Case
 		elif p.left == None or p.right == None:
-			if key == self.root.key:
+			if p.key == self.root.key:
 				if self.root.left != None:
 					self.root = self.root.left
 					self.root.parent= None
@@ -148,9 +151,9 @@ class BinarySearchTree:
 					p.parent.left = p.right
 		#TwoChild Case
 		else:
-			if key == self.root.key:
+			if p.key == self.root.key:
 				temp = self.root.find_successor()
-				self.delete(self.root.find_successor().key)
+				self.delete_node(self.root.find_successor())
 				saveleft= self.root.left
 				saveright= self.root.right
 				self.root = temp
@@ -159,7 +162,7 @@ class BinarySearchTree:
 				self.root.parent= None
 			else:
 				temp = p.find_successor()
-				self.delete(p.find_successor().key)
+				self.delete_node(p.find_successor())
 				saveleft = p.left
 				saveright = p.right
 				temp.parent = p.parent
