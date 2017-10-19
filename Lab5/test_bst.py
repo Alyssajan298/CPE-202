@@ -120,18 +120,19 @@ class testing_queues(unittest.TestCase):
 		t.insert(20)
 		t.insert(23)
 		t.insert(30)
+		t.insert(19)
 		print ('                     ', t.root.key)
 		print ('                    ',t.root.left.key,t.root.right.key)
 		print ('                  ',t.root.left.left.key,t.root.left.right.key,t.root.right.left.key,t.root.right.right.key)
 		print ('             ', t.root.left.left.left.key, t.root.left.left.right.key, t.root.left.right.left.key, t.root.left.right.right.key, t.root.right.left.left.key, t.root.right.left.right.key, t.root.right.right.left.key, t.root.right.right.right.key)
 
-
+		self.assertTrue(t.find(16))
 		t.delete(16)
 		print ('                     ', t.root.key)
 		print ('                    ',t.root.left.key,t.root.right.key)
 		print ('                  ',t.root.left.left.key,t.root.left.right.key,t.root.right.left.key,t.root.right.right.key)
-		print ('             ', t.root.left.left.left.key, t.root.left.left.right.key, t.root.left.right.left.key, t.root.left.right.right.key, t.root.right.left.left.key,t.root.right.right.left.key, t.root.right.right.right.key)
-
+		print ('             ', t.root.left.left.left.key, t.root.left.left.right.key, t.root.left.right.left.key, t.root.left.right.right.key, t.root.right.left.left.key,t.root.right.left.right.key,t.root.right.right.left.key, t.root.right.right.right.key)
+		self.assertFalse(t.find(16))
 	def test_find_successor(self):
 		t = BinarySearchTree()
 		t.insert(3)
