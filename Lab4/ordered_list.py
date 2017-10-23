@@ -14,7 +14,7 @@ class OrderedList():
 		previous = None
 		stop = False
 		while current != None and not stop:
-			if current.getData() > item: 
+			if current.getData() > item:
 				stop = True
 			else:
 				previous = current
@@ -53,7 +53,7 @@ class OrderedList():
 				if self.capacity == 1:
 					self.head = None
 					self.tail = None
-				elif index == 0: 
+				elif index == 0:
 					self.head = start.getNext()
 				elif index == self.capacity-1:
 					start.getPrev().setNext(None)
@@ -65,7 +65,7 @@ class OrderedList():
 				break
 			else:
 				start = start.getNext()
-				index+=1    
+				index+=1
 	def search_forward(self,item):
 		'''Searches for the item by starting at the head'''
 		'''Returns True if the item is in the list'''
@@ -81,23 +81,23 @@ class OrderedList():
 	def search_backward(self,item):
 		'''Searches for the item by starting at the tail'''
 		'''Returns True if the item is in the list'''
-		index = self.capacity -1 
+		index = self.capacity -1
 		start = self.tail
 		while index >= 0:
 			if start.getData() == item:
 				return True
 			else:
 				start = start.getPrev()
-				index-=1 
-		return False  
+				index-=1
+		return False
 	def is_empty(self):
 		'''Returns if the list is empty (size == 0)'''
 		return self.capacity == 0
-	
+
 	def size(self):
 		'''Returns the size of the list'''
 		return self.capacity
-	
+
 	def index(self,item):
 		'''Returns the index of the item'''
 		'''Assumes that the item is in the list'''
@@ -118,20 +118,22 @@ class OrderedList():
 			temp = self.tail.getData()
 			self.tail = self.tail.getPrev()
 			if self.capacity == 1:
+				self.head = None
+				self.capacity-=1
 				return temp
 			self.tail.setNext(None)
 			self.capacity-=1
 			return temp
 		index = 0
 		start = self.head
-		if pos <= self.capacity//2: 
+		if pos <= self.capacity//2:
 			while index < self.capacity:
 				if index == pos:
 					temp = start.getData()
 					if self.capacity == 1:
 						self.head = None
 						self.tail = None
-					elif index == 0: 
+					elif index == 0:
 						self.head = start.getNext()
 					elif index == self.capacity-1:
 						start.getPrev().setNext(None)
@@ -141,12 +143,12 @@ class OrderedList():
 						start.getPrev().setNext(start.getNext())
 					self.capacity-=1
 					return temp
-				
+
 				else:
 					start = start.getNext()
 					index+=1
 		elif pos > self.capacity//2:
-			index = self.capacity -1 
+			index = self.capacity -1
 			start = self.tail
 			while index >= 0:
 				if index == pos:
@@ -154,7 +156,7 @@ class OrderedList():
 					if self.capacity == 1:
 						self.head = None
 						self.tail = None
-					elif index == 0: 
+					elif index == 0:
 						self.head = start.getNext()
 					elif index == self.capacity-1:
 						start.getPrev().setNext(None)
@@ -162,7 +164,7 @@ class OrderedList():
 					else:
 						start.getPrev().setNext(start.getNext())
 						start.getNext().setPrev(start.getPrev())
-						
+
 					self.capacity-=1
 					return temp
 				else:

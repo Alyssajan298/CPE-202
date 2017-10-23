@@ -1,7 +1,7 @@
 import unittest
 from ordered_list import *
 class Test_OrderedList(unittest.TestCase):
-	
+
 	def test_add0(self):
 		''' Tests the add, index, and remove function '''
 		g = OrderedList()
@@ -41,7 +41,7 @@ class Test_OrderedList(unittest.TestCase):
 		g.remove(0)
 		g.remove(2)
 		self.assertTrue(g.is_empty())
-	
+
 	def test_add1(self):
 		''' Tests the add function with end cases (head and tail exceptions) '''
 		h = OrderedList()
@@ -70,7 +70,7 @@ class Test_OrderedList(unittest.TestCase):
 		self.assertEqual(h.head.getNext().getNext().getNext().getNext().getData(),3)
 		self.assertEqual(h.head.getNext().getNext().getNext().getNext().getNext().getData(),4)
 		self.assertEqual(h.size(),6)
-	
+
 	def test_addremove_withsearches(self):
 		'''Tests add remove with searches'''
 		l = OrderedList()
@@ -104,7 +104,7 @@ class Test_OrderedList(unittest.TestCase):
 		l.add(4)
 		self.assertFalse(l.is_empty())
 		self.assertEqual(l.index(3),2)
-		
+
 		self.assertEqual(l.pop(),4)
 		self.assertEqual(l.pop(),3)
 
@@ -119,7 +119,7 @@ class Test_OrderedList(unittest.TestCase):
 		self.assertFalse(l.is_empty())
 		l.add(3)
 		l.add(4)
-		
+
 		self.assertEqual(l.pop(0),1)
 		self.assertEqual(l.pop(2),4)
 		self.assertEqual(l.pop(1),3)
@@ -134,18 +134,46 @@ class Test_OrderedList(unittest.TestCase):
 		l.add(4)
 		l.add(3)
 		l.add(2)
-		
+
 		self.assertEqual(l.pop(),5)
 		self.assertEqual(l.pop(1),2)
 		self.assertEqual(l.pop(),4)
 		self.assertEqual(l.pop(0),1)
 		self.assertEqual(l.pop(),3)
 
-
+	def test_OrderedList17(self):
+		new_list = OrderedList()
+		new_list.add(5)
+		self.assertEqual(new_list.pop(0), 5)
+		new_list.add(10)
+		self.assertEqual(new_list.pop(), 10)
+		new_list.add(15)
+		new_list.remove(15)
+		self.assertTrue(new_list.is_empty())
+		self.assertEqual(new_list.size(), 0)
+		new_list.add(20)
+		self.assertTrue(new_list.search_forward(20))
+		self.assertTrue(new_list.search_backward(20))
+		self.assertEqual(new_list.index(20), 0)
+	def test_OrderedList1(self):
+		list_val = []
+		new_list = OrderedList()
+		new_list.add(2.5)
+		new_list.add(5)
+		new_list.add(1)
+		new_list.add(3)
+		new_list.add(20)
+		new_list.add(7)
+		list_val.append(new_list.pop())
+		list_val.append(new_list.pop())
+		list_val.append(new_list.pop())
+		list_val.append(new_list.pop())
+		list_val.append(new_list.pop())
+		list_val.append(new_list.pop())
+		self.assertEqual(list_val, [20, 7, 5, 3, 2.5, 1])
+		self.assertTrue(new_list.is_empty())
 
 
 
 if __name__ == "__main__":
 	unittest.main()
-
-
