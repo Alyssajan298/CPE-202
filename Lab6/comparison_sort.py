@@ -68,12 +68,6 @@ def merge_sort(alist,counter1=None):
 def increment(low,high,counter):
 	counter.inc()
 	return low < high
-alist = list(range(50,0,-1))
-print insert_sort(alist)
-blist = list(range(50,0,-1))
-print select_sort(blist)
-clist = list(range(50,0,-1))
-print merge_sort(clist)
 class testing_sorts(unittest.TestCase):
 
 	def test_worstcase_select(self):
@@ -81,7 +75,7 @@ class testing_sorts(unittest.TestCase):
 		it will compare every element aganst each other every time'''
 		l = [1,4,5,1,2,1,3,23,2,1]
 		ssort = l[:]
-		select_sort(ssort)
+		self.assertEqual(select_sort(ssort),45)
 		pysort = l[:]
 		'''Will go through outer loop n times
 		Each time through outer loop will compare alist[big] to succeding elements:
@@ -99,7 +93,7 @@ class testing_sorts(unittest.TestCase):
 		Effectively acts like selection sort by needing to compare every element against each other'''
 		l = [9,8,7,6,5,4,3,2,1]
 		isort = l[:]
-		insert_sort(isort)
+		self.assertEqual(insert_sort(isort),36)
 		pysort = l[:]
 		'''Will loop through all indecies of the list
 		On each execution of the loop, will decide where current element goes in the sorted preceeding spots
@@ -120,7 +114,7 @@ class testing_sorts(unittest.TestCase):
 		# pass
 		l = [3,2,5,1,6,4]
 		ssort = l[:]
-		select_sort(ssort)
+		self.assertEqual(select_sort(ssort),15)
 		pysort = l[:]
 		pysort.sort()
 		self.assertEqual(ssort,pysort)
@@ -132,7 +126,7 @@ class testing_sorts(unittest.TestCase):
 		# pass
 		l = [3,2,5,1,6,4]
 		isort = l[:]
-		insert_sort(isort)
+		self.assertEqual(insert_sort(isort),9)
 		pysort = l[:]
 		pysort.sort()
 		self.assertEqual(isort,pysort)
@@ -144,7 +138,7 @@ class testing_sorts(unittest.TestCase):
 		# pass
 		l = [3,2,5,1,6,4]
 		msort = l[:]
-		merge_sort(msort)
+		self.assertEqual(merge_sort(msort),10)
 		pysort = l[:]
 		pysort.sort()
 		self.assertEqual(msort,pysort)
@@ -153,7 +147,7 @@ class testing_sorts(unittest.TestCase):
 		for x in range(1):
 			orig = []
 			for y in range(randint(0,1000)):
-				orig.append(randint(0,10000))
+				orig.append(randint(0,100000))
 			tsort = orig[:]
 			psort = orig[:]
 			select_sort(tsort)
@@ -164,7 +158,7 @@ class testing_sorts(unittest.TestCase):
 		for x in range(1):
 			orig = []
 			for y in range(randint(0,1000)):
-				orig.append(randint(0,10000))
+				orig.append(randint(0,100000))
 			tsort = orig[:]
 			psort = orig[:]
 			insert_sort(tsort)
@@ -175,18 +169,13 @@ class testing_sorts(unittest.TestCase):
 		for x in range(1):
 			orig = []
 			for y in range(randint(0,1000)):
-				orig.append(randint(0,10000))
+				orig.append(randint(0,100000))
 			tsort = orig[:]
 			psort = orig[:]
 			merge_sort(tsort)
 			psort.sort()
 			self.assertEqual(len(tsort), len(psort))
 			self.assertEqual(tsort,psort)
-
-
-
-
-
 
 if __name__ == "__main__":
 	unittest.main()
