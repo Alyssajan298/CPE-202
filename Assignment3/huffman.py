@@ -16,6 +16,8 @@ class HuffmanNode:
 
 	def set_right (self, node):
 		self.right = node
+	def is_leaf(self):
+		return self.left is None and self.right is None
 
 
 
@@ -23,7 +25,10 @@ class HuffmanNode:
 
 def comes_before (a, b) :
 	"""returns true if tree rooted at node a comes before tree rooted at node b """
-	return a.char < b.char 
+	if a.freq == b.freq:
+		return a.char < b.char
+	else:
+		return a.freq < b.freq
 def combine (a, b) :
 	""" creates a new huffman node with children a and b with combined freq with name of the left child """
 
