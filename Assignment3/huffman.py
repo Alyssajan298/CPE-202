@@ -20,25 +20,26 @@ class HuffmanNode:
 
 
 
+
 def comes_before (a, b) :
 	"""returns true if tree rooted at node a comes before tree rooted at node b """
-
+	return a.char < b.char 
 def combine (a, b) :
 	""" creates a new huffman node with children a and b with combined freq with name of the left child """
 
 def cnt_freq(filename):
 	f = open(filename,encoding='utf-8-sig')
-	cuntlist=[]
+	countlist=[]
 	for x in range(256):
-		cuntlist.append(0)
+		countlist.append(0)
 	while True:
 		c = f.read(1)
 		if not c:
 			print ("End of file")
 			break
-		# if True or ord(c) < 256:
-		cuntlist[ord(c)] += 1
-	print(cuntlist)
+		countlist[ord(c)] += 1
+	f.close()
+	return countlist
 def create_huff_tree(char_freq):
 	pass
 def create_code (node):
