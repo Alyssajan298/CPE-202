@@ -4,10 +4,15 @@ from huffman import *
 
 class TestList(unittest.TestCase):
 	def test_cnt_freq(self):
-	  freqlist	= cnt_freq("file1.txt")
-	  anslist = [0]*256
-	  anslist[97:104] = [2, 4, 8, 16, 0, 2, 0]
-	  self.assertListEqual(freqlist[97:104], anslist[97:104])
+		freqlist= cnt_freq("file1.txt")
+		anslist = [0]*256
+		anslist[97:104] = [2, 4, 8, 16, 0, 2, 0]
+		self.assertListEqual(freqlist[97:104], anslist[97:104])
+	def test_find_min(self):
+		freqlist = cnt_freq("file1.txt")
+		anslist = create_freq_list(freqlist)
+		temp = find_min(anslist)
+		self.assertEqual((anslist[temp]).char, ord('a'))
 
 	# def test_create_huff_tree(self):
 	#   freqlist = cnt_freq("file1.txt")

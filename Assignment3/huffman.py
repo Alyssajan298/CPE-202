@@ -40,7 +40,6 @@ def cnt_freq(filename):
 	while True:
 		c = f.read(1)
 		if not c:
-			print ("End of file")
 			break
 		countlist[ord(c)] += 1
 	f.close()
@@ -55,14 +54,17 @@ def huffman_encode(in_file, out_file):
 	pass
 def huffman_decode(freqs, encoded_file, decode_file):
 	pass
-def find_Min(nodelist):
+def find_min(nodelist):
 	current_min= nodelist[0]
 	index = 1
+	saveindex= 0
 	while index < len(nodelist):
 		if comes_before(nodelist[index],current_min):
 			current_min = nodelist[index]
+			saveindex= index
 		index+=1
-	return current_min
+	# return current_min
+	return saveindex
 def create_freq_list(countlist):
 	nodelist = []
 	for i in range(len(countlist)):
