@@ -5,7 +5,7 @@ class HuffmanNode:
 		self.char = char  # actually the character code
 		self.freq = freq
 		self.code = None
-		self.left = Nonex
+		self.left = None
 		self.right = None
 
 	def set_code (self, code):
@@ -55,5 +55,20 @@ def huffman_encode(in_file, out_file):
 	pass
 def huffman_decode(freqs, encoded_file, decode_file):
 	pass
+def find_Min(nodelist):
+	current_min= nodelist[0]
+	index = 1
+	while index < len(nodelist):
+		if comes_before(nodelist[index],current_min):
+			current_min = nodelist[index]
+		index+=1
+	return current_min
+def create_freq_list(countlist):
+	nodelist = []
+	for i in range(len(countlist)):
+			if countlist[i] > 0:
+				nodelist.append(HuffmanNode(i,countlist[i]))
+	return nodelist
+
 
 cnt_freq('file1.txt')
