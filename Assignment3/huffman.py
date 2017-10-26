@@ -44,7 +44,7 @@ def combine (a, b) :
 	par.right = b
 	return par
 def cnt_freq(filename):
-	f = open(filename,encoding='utf-8-sig')
+	f = open(filename)
 	countlist=[]
 	for x in range(256):
 		countlist.append(0)
@@ -52,7 +52,9 @@ def cnt_freq(filename):
 		c = f.read(1)
 		if not c:
 			break
-		countlist[ord(c)] += 1
+		if ord(c) < 256:
+
+			countlist[ord(c)] += 1
 	f.close()
 	return countlist
 def create_huff_tree(char_freq):
@@ -94,9 +96,35 @@ def recurse_code(node,current_code,codelist):
 def tree_preord(node):
 	pass
 def huffman_encode(in_file, out_file):
-	pass
+	tree = create_huff_tree(cnt_freq(in_file))
+	code = create_code(tree)
+
+	inf = open(in_file,'r')
+	outf = open(out_file,'w')
+	while True:
+		c = inf.read(1)
+		if not c:
+			break
+		outf.write(str(code[ord(c)]))
+	inf.close()
+	outf.close()
 def huffman_decode(freqs, encoded_file, decode_file):
-	pass
+	tree = create_huff_tree(freqs)
+	codelist = create_code(tree)
+	inf = open(encoded_file,'r')
+	outf = open(decode_file,'w')
+
+	codepart = ''
+	while True:
+		c = inf.read(1)
+		if not c:
+			break
+		codepart += c
+		if codepart in codelist:
+			outf.write(chr(codelist.index(codepart)))
+			codepart = ''
+	inf.close()
+	outf.close()
 def find_min(nodelist):
 	current_min= nodelist[0]
 	index = 1

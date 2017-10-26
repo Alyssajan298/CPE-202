@@ -45,18 +45,23 @@ class TestList(unittest.TestCase):
 	  self.assertEqual(codes[ord('a')], '0000')
 	  self.assertEqual(codes[ord('f')], '0001')
 
-	# def test_01_encodefile(self):
-	#   huffman_encode("file1.txt", "output1.txt")
-	#   # capture errors by running 'filecmp' on your encoded file
-	#   # with a *known* solution file
-	#   self.assertTrue(filecmp.cmp("output1.txt", "output1_soln.txt"))
-	#
-	# def test_01_decodefile(self):
-	#   freqlist = cnt_freq("file1.txt")
-	#   huffman_decode(freqlist,"output1.txt", "decodefile1.txt")
-	#   # capture errors by running 'filecmp' on your encoded file
-	#   # with a *known* solution file
-	#   self.assertTrue(filecmp.cmp("decodefile1.txt", "file1.txt"))
+	def test_01_encodefile(self):
+	  huffman_encode("file1.txt", "output1.txt")
+	  # capture errors by running 'filecmp' on your encoded file
+	  # with a *known* solution file
+	  self.assertTrue(filecmp.cmp("output1.txt", "output1_soln.txt"))
+
+	def test_01_decodefile(self):
+	  freqlist = cnt_freq("file1.txt")
+	  huffman_decode(freqlist,"output1.txt", "decodefile1.txt")
+	  # capture errors by running 'filecmp' on your encoded file
+	  # with a *known* solution file
+	  self.assertTrue(filecmp.cmp("decodefile1.txt", "file1.txt"))
+	def test_ibeelieve(self):
+		freqlist = cnt_freq("beemovie.txt")
+		huffman_encode("beemovie.txt", "beemovie.huf")
+		huffman_decode(freqlist,"beemovie.huf","beemovieREWIND.txt")
+		self.assertTrue(filecmp.cmp("beemovie.txt", "beemovieREWIND.txt"))
 
 if __name__ == '__main__':
    unittest.main()
