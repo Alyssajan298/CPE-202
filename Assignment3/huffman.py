@@ -66,8 +66,6 @@ def create_huff_tree(char_freq):
 		node2 = new_List[i]
 		del new_List[i]
 		hufftree = combine(node1,node2)
-		node1.code = 0
-		node2.code = 1
 		new_List.append(hufftree)
 	root = new_List[0]
 	root.set_left(node1)
@@ -77,8 +75,23 @@ def create_huff_tree(char_freq):
 
 
 def create_code (root_node):
-	pass
-def tree_preord (node):
+	codelist=[]
+	for x in range(256):
+		codelist.append(None)
+	recurse_code(root_node,"", codelist)
+	return codelist
+def recurse_code(node,current_code,codelist):
+	if node.is_leaf() == False:
+		recurse_code(node.left,current_code+"0",codelist)
+		recurse_code(node.right,current_code+"1",codelist)
+	else:
+		node.set_code = current_code
+		codelist[(node.char)]= current_code
+
+
+
+
+def tree_preord(node):
 	pass
 def huffman_encode(in_file, out_file):
 	pass
