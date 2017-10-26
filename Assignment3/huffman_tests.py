@@ -13,6 +13,17 @@ class TestList(unittest.TestCase):
 		anslist = create_freq_list(freqlist)
 		temp = find_min(anslist)
 		self.assertEqual((anslist[temp]).char, ord('a'))
+	def test_find_min1(self):
+		nodelist = create_freq_list(cnt_freq("file1.txt"))
+		self.assertTrue(len(nodelist) < 250)
+		for node in nodelist:
+			self.assertNotEqual(node.freq,0)
+
+		freqchars = ['a','f','b','c','d']
+		for f in freqchars:
+			i = find_min(nodelist)
+			self.assertEqual(nodelist[i].char,ord(f))
+			del nodelist[i]
 
 	# def test_create_huff_tree(self):
 	#   freqlist = cnt_freq("file1.txt")

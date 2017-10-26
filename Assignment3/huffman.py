@@ -31,7 +31,18 @@ def comes_before (a, b) :
 		return a.freq < b.freq
 def combine (a, b) :
 	""" creates a new huffman node with children a and b with combined freq with name of the left child """
-
+	if not comes_before(a,b):
+		raise AssertionError("A must come before b when calling combine")
+	c = None
+	if a.char <  b.char:
+		c = a.char
+	else:
+		c= b.char
+	f = a.freq + b.freq
+	par = HuffmanNode(c,f)
+	par.left = a
+	par.right = b
+	return par
 def cnt_freq(filename):
 	f = open(filename,encoding='utf-8-sig')
 	countlist=[]
