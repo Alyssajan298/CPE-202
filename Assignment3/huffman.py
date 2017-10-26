@@ -56,8 +56,27 @@ def cnt_freq(filename):
 	f.close()
 	return countlist
 def create_huff_tree(char_freq):
-	pass
-def create_code (node):
+	new_List= create_freq_list(char_freq)
+	hufftree = None
+	while len(new_List) != 1:
+		i = find_min(new_List)
+		node1 = new_List[i]
+		del new_List[i]
+		i = find_min(new_List)
+		node2 = new_List[i]
+		del new_List[i]
+		hufftree = combine(node1,node2)
+		node1.code = 0
+		node2.code = 1
+		new_List.append(hufftree)
+	root = new_List[0]
+	root.set_left(node1)
+	root.set_right(node2)
+	return root
+
+
+
+def create_code (root_node):
 	pass
 def tree_preord (node):
 	pass

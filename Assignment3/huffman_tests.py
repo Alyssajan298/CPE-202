@@ -24,6 +24,19 @@ class TestList(unittest.TestCase):
 			i = find_min(nodelist)
 			self.assertEqual(nodelist[i].char,ord(f))
 			del nodelist[i]
+	def test_create_huff_tree(self):
+		freqlist = cnt_freq("file1.txt")
+		hufftree = create_huff_tree(freqlist)
+		numchars = 32
+		charforroot = "a"
+		self.assertEqual(hufftree.freq, 32)
+		self.assertEqual(hufftree.char, 97)
+		left = hufftree.left
+		self.assertEqual(left.freq, 16)
+		self.assertEqual(left.char, 97)
+		right = hufftree.right
+		self.assertEqual(right.freq, 16)
+		self.assertEqual(right.char, 100)
 
 	# def test_create_huff_tree(self):
 	#   freqlist = cnt_freq("file1.txt")
