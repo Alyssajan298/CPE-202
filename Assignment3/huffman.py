@@ -59,6 +59,8 @@ def cnt_freq(filename):
 	return countlist
 def create_huff_tree(char_freq):
 	new_List= create_freq_list(char_freq)
+	if len(new_List) is 0:
+		return HuffmanNode(0,0)
 	hufftree = None
 	while len(new_List) != 1:
 		i = find_min(new_List)
@@ -70,8 +72,6 @@ def create_huff_tree(char_freq):
 		hufftree = combine(node1,node2)
 		new_List.append(hufftree)
 	root = new_List[0]
-	root.set_left(node1)
-	root.set_right(node2)
 	return root
 
 
@@ -92,15 +92,50 @@ def recurse_code(node,current_code,codelist):
 
 
 
-
+createstr = ''
 def tree_preord(node):
-	pass
+	global createstr
+	createstr= ""
+	recurse_tree(node)
+	return createstr
+def recurse_tree(node):
+	global createstr
+	if node != None:
+		if node.is_leaf() == False:
+			createstr = createstr + "0"
+		elif node.is_leaf() == True:
+			createstr = createstr +"1"
+			createstr = createstr + chr(node.char)
+		if node.left != None or node.right != None:
+			recurse_tree(node.left)
+			recurse_tree(node.right)
+
+
+
+
 def huffman_encode(in_file, out_file):
+
 	tree = create_huff_tree(cnt_freq(in_file))
+
+	try:
+		outf = open(out_file,'w')
+	except:
+		raise FileNotFoundError("input file not found")
+
+
+
+	if tree.is_leaf() and tree.freq > 0:
+		outf.write(chr(tree.char))
+		outf.write(' ')
+		outf.write(str(tree.freq))
+
 	code = create_code(tree)
 
-	inf = open(in_file,'r')
-	outf = open(out_file,'w')
+	try:
+		inf = open(in_file,'r')
+	except:
+		raise FileNotFoundError("input file not found")
+
 	while True:
 		c = inf.read(1)
 		if not c:
@@ -108,11 +143,16 @@ def huffman_encode(in_file, out_file):
 		outf.write(str(code[ord(c)]))
 	inf.close()
 	outf.close()
+
 def huffman_decode(freqs, encoded_file, decode_file):
 	tree = create_huff_tree(freqs)
 	codelist = create_code(tree)
-	inf = open(encoded_file,'r')
-	outf = open(decode_file,'w')
+
+	try:
+		inf = open(encoded_file,'r')
+		outf = open(decode_file,'w')
+	except:
+		raise FileNotFoundError("input file not found")
 
 	codepart = ''
 	while True:
@@ -124,6 +164,13 @@ def huffman_decode(freqs, encoded_file, decode_file):
 			outf.write(chr(codelist.index(codepart)))
 			codepart = ''
 	inf.close()
+
+	if tree.is_leaf() and tree.freq > 0:
+		l = codepart.split()
+		times = int(l[1])
+		for i in range(times):
+			outf.write(l[0])
+
 	outf.close()
 def find_min(nodelist):
 	current_min= nodelist[0]

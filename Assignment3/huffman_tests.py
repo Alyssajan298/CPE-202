@@ -57,11 +57,42 @@ class TestList(unittest.TestCase):
 	  # capture errors by running 'filecmp' on your encoded file
 	  # with a *known* solution file
 	  self.assertTrue(filecmp.cmp("decodefile1.txt", "file1.txt"))
-	def test_ibeelieve(self):
-		freqlist = cnt_freq("beemovie.txt")
-		huffman_encode("beemovie.txt", "beemovie.huf")
-		huffman_decode(freqlist,"beemovie.huf","beemovieREWIND.txt")
-		self.assertTrue(filecmp.cmp("beemovie.txt", "beemovieREWIND.txt"))
+	def test_shrek(self):
+		freqlist = cnt_freq("shrek.txt")
+		huffman_encode("shrek.txt", "shrek.huf")
+		huffman_decode(freqlist,"shrek.huf","shrekREWINDHUF.txt")
+		self.assertTrue(filecmp.cmp("shrek.txt", "shrekREWINDHUF.txt"))
+	def test_smash(self):
+		freqlist = cnt_freq("smash.txt")
+		huffman_encode("smash.txt", "smash.huf")
+		huffman_decode(freqlist,"smash.huf","smashREWIND.txt")
+		self.assertTrue(filecmp.cmp("smash.txt", "smashREWIND.txt"))
+	def test_wonky(self):
+		freqlist = cnt_freq("exclaim.txt")
+		huffman_encode("exclaim.txt", "exclaim.huf")
+		huffman_decode(freqlist,"exclaim.huf","exclaimREWIND.txt")
+		self.assertTrue(filecmp.cmp("exclaim.txt", "exclaimREWIND.txt"))
+	def test_ez_preord(self):
+		build = tree_preord(create_huff_tree(cnt_freq("file1.txt")))
+		expectstring = '00001a1f1b1c1d'
+		self.assertEqual(len(expectstring),len(build))
+		for i in range(len(build)):
+			self.assertEqual(expectstring[i],build[i])
+	def test_empty_testfile(self):
+		open('empty_file.txt', 'a').close()
+		freqlist = cnt_freq("empty_file.txt")
+		huffman_encode("empty_file.txt", "empty.huf")
+		huffman_decode(freqlist,"empty.huf","emptyREWIND.txt")
+		self.assertTrue(filecmp.cmp("empty_file.txt", "emptyREWIND.txt"))
+
+	def test_file_not_exist(self):
+		with self.assertRaises(FileNotFoundError):
+			freqlist = cnt_freq("DNE.txt")
+		with self.assertRaises(FileNotFoundError):
+			huffman_encode("DNE.txt","N/A")
+		with self.assertRaises(FileNotFoundError):
+			huffman_decode(cnt_freq("file1.txt"),"DNE.txt","N/A")
+
 
 if __name__ == '__main__':
    unittest.main()
