@@ -12,7 +12,7 @@ class HuffmanNode:
 		self.code = code
 
 	def set_left (self, node):
-		self.left = node
+		meme.left = node
 
 	def set_right (self, node):
 		self.right = node
