@@ -11,8 +11,9 @@ class MaxHeap(object):
         """
         Initialize class MaxHeap
         """
+        self.scapacity = capacity
         self.size = 0
-        self.heaplist = [capacity]
+        self.heaplist = [None] * (capacity + 1)
 
     def insert(self, item):
         """
@@ -21,8 +22,8 @@ class MaxHeap(object):
         """
         if self.size == len(self.heaplist):
             return False
-        self.heaplist.append(item)
         self.size += 1
+        self.heaplist[self.size] = item
         self.perc_up(self.size)
         return True
 
@@ -40,9 +41,9 @@ class MaxHeap(object):
 
     def heap_contents(self):
         """
-        docstring
+        Returns the Heap List
         """
-        pass
+        return self.heaplist
 
     def build_heap(self, alist):
         """
@@ -62,7 +63,7 @@ class MaxHeap(object):
         Returns True/False if
         Heap is full.
         """
-        return self.size == len(self.heaplist)
+        return self.size == self.scapacity
 
     def get_heap_cap(self):
         """
@@ -88,7 +89,16 @@ class MaxHeap(object):
         Function that moves
         elements in Heap up.
         """
-        pass
+        if i >= len(self.heaplist):
+            raise IndexError
+        compare = i // 2
+        child = i
+        while compare > 0 and self.heaplist[compare] <= self.heaplist[child]:
+            temp = self.heaplist[compare]
+            self.heaplist[compare] = self.heaplist[child]
+            self.heaplist[child] = temp
+            child = compare
+            compare = compare // 2
 
     def heap_sort_increase(self, alist):
         """
