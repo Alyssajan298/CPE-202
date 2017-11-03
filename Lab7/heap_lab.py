@@ -29,9 +29,9 @@ class MaxHeap(object):
 
     def find_max(self):
         """
-        docstring
+        Returns the Maximum Value of the Heap
         """
-        pass
+        return self.heaplist[1]
 
     def del_max(self):
         """
@@ -43,7 +43,9 @@ class MaxHeap(object):
         """
         Returns the Heap List
         """
-        return self.heaplist
+        arr = self.heaplist
+        arr = arr[1:self.size+1]
+        return arr
 
     def build_heap(self, alist):
         """
@@ -67,15 +69,17 @@ class MaxHeap(object):
 
     def get_heap_cap(self):
         """
-        docstring
+        Returns the capacity of
+        the Heap
         """
-        pass
+        return self.scapacity
 
     def get_heap_size(self):
         """
-        docstring
+        Returns the current Size of
+        the Heap
         """
-        pass
+        return self.size
 
     def perc_down(self, i):
         """
@@ -86,7 +90,7 @@ class MaxHeap(object):
 
     def perc_up(self, i):
         """
-        Function that moves
+        Function that move
         elements in Heap up.
         """
         if i >= len(self.heaplist):
