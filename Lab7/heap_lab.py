@@ -35,9 +35,15 @@ class MaxHeap(object):
 
     def del_max(self):
         """
-        docstring
+        Returns the Maximum Value and deletes it
         """
-        pass
+        if self.size == 0:
+            raise IndexError
+        maxim = self.heaplist[1]
+        self.perc_down(1)
+        self.heaplist[self.size] = None
+        self.size -= 1
+        return maxim
 
     def heap_contents(self):
         """
