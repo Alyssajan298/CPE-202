@@ -57,6 +57,37 @@ class TestHeap(unittest.TestCase):
         self.assertFalse(heap.is_full())
         self.assertEqual(heap.heap_contents(), [8, 7, 5, 6, 2, 1, 4, 0, 3])
 
+    def test_delete(self):
+        """
+        Docstring
+        """
+        heap = MaxHeap(10)
+        for i in range(9):
+            heap.insert(i)
+        self.assertEqual(heap.del_max(), 8)
+        self.assertEqual(heap.heap_contents(), [7, 6, 5, 3, 2, 1, 4, 0])
+
+    def test_delete2(self):
+        """
+        Docstring
+        """
+        heap = MaxHeap()
+        heap.insert(103)
+        heap.insert(98)
+        heap.insert(77)
+        heap.insert(28)
+        heap.insert(34)
+        heap.insert(7)
+        heap.insert(50)
+        heap.insert(2)
+        self.assertEqual(heap.heap_contents(), [103, 98, 77, 28, 34, 7, 50, 2])
+        self.assertEqual(heap.del_max(), 103)
+        self.assertEqual(heap.heap_contents(), [98, 34, 77, 28, 2, 7, 50])
+    
+    def test_dupli(self):
+        """
+        Docstring
+        """
 
 if __name__ == "__main__":
     unittest.main()

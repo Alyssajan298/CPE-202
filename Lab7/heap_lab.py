@@ -40,9 +40,10 @@ class MaxHeap(object):
         if self.size == 0:
             raise IndexError
         maxim = self.heaplist[1]
-        self.perc_down(1)
-        self.heaplist[self.size] = None
+        self.heaplist[1] = self.heaplist[self.size]
+        self.heaplist[self.size] = maxim
         self.size -= 1
+        self.perc_down(1)
         return maxim
 
     def heap_contents(self):
@@ -92,7 +93,17 @@ class MaxHeap(object):
         Function that moves
         elements in Heap down.
         """
-        pass
+        while (i * 2) <= self.size and (i * 2 + 1) <= self.size:
+            if self.heaplist[i * 2] >= self.heaplist[i * 2 + 1]:
+                temp = self.heaplist[i * 2]
+                self.heaplist[i * 2] = self.heaplist[i]
+                self.heaplist[i] = temp
+                i = i * 2
+            else:
+                temp = self.heaplist[i * 2 + 1]
+                self.heaplist[i * 2 + 1] = self.heaplist[i]
+                self.heaplist[i] = temp
+                i = i * 2 + 1
 
     def perc_up(self, i):
         """
