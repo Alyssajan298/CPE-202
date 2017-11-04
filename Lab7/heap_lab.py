@@ -2,7 +2,6 @@
 Implementation of a MaxHeap
 """
 
-
 class MaxHeap(object):
     """
     MaxHeap Class Bottom-Up
@@ -107,42 +106,41 @@ class MaxHeap(object):
         firstchild = self.heaplist[i * 2]
         secondchild = self.heaplist[i * 2 + 1]
        # if current <= firstchild or current <= secondchild:
-        while self.qualify(i * 2, i * 2 + 1):
-            if current <= firstchild or current <= secondchild:
-                if secondchild == None:
-                    temp = self.heaplist[i * 2]
-                    self.heaplist[i * 2] = self.heaplist[i]
-                    self.heaplist[i] = temp
-                    break
-                if firstchild > secondchild:
-                    temp = self.heaplist[i * 2]
-                    self.heaplist[i * 2] = self.heaplist[i]
-                    self.heaplist[i] = temp
-                    i = i * 2
-                    current = self.heaplist[i]
-                    firstchild = self.heaplist[i * 2]
-                    secondchild = self.heaplist[i * 2 + 1]
-                else:
-                    temp = self.heaplist[i * 2 + 1]
-                    self.heaplist[i * 2 + 1] = self.heaplist[i]
-                    self.heaplist[i] = temp
-                    i = i * 2 + 1
-                    current = self.heaplist[i]
-                    firstchild = self.heaplist[i * 2]
-                    secondchild = self.heaplist[i * 2 + 1]
-            else:
+        while self.qualify(current, i * 2, i * 2 + 1):
+            if secondchild == None:
+                temp = self.heaplist[i * 2]
+                self.heaplist[i * 2] = self.heaplist[i]
+                self.heaplist[i] = temp
                 break
+            if firstchild > secondchild:
+                temp = self.heaplist[i * 2]
+                self.heaplist[i * 2] = self.heaplist[i]
+                self.heaplist[i] = temp
+                i = i * 2
+                current = self.heaplist[i]
+                firstchild = self.heaplist[i * 2]
+                secondchild = self.heaplist[i * 2 + 1]
+            else:
+                temp = self.heaplist[i * 2 + 1]
+                self.heaplist[i * 2 + 1] = self.heaplist[i]
+                self.heaplist[i] = temp
+                i = i * 2 + 1
+                current = self.heaplist[i]
+                firstchild = self.heaplist[i * 2]
+                secondchild = self.heaplist[i * 2 + 1]
 
-    def qualify(self, child1, child2):
+    def qualify(self, current, child1, child2):
         """
         Helper Function for perc_down
         """
         if self.heaplist[child1] is not None and self.heaplist[child2] is None:
             if child1 <= self.size:
-                return True
+                if current <= self.heaplist[child1]:
+                    return True
         elif self.heaplist[child1] is not None and self.heaplist[child2] is not None:
             if child1 <= self.size and child2 <= self.size:
-                return True
+                if current <= self.heaplist[child1] or current <= self.heaplist[child2]:
+                    return True
         else:
             return False
 
@@ -169,11 +167,8 @@ class MaxHeap(object):
         self.build_heap(alist)
         bigsize = self.get_heap_size()
         for i in range(bigsize):
-            if self.size == 1:
-                break
+            if self.size == 2:
+                if self.heaplist[2] > self.heaplist[1]:
+                    break
             self.del_max()
-            print(self.heaplist)
         return self.heaplist[1:len(alist)+1]
-alist = [1, 3, 2, 7, 4, 0, 5, 6]
-heap = MaxHeap()
-heap.heap_sort_increase(alist)
