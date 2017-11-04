@@ -1,5 +1,5 @@
 """
-Module Docstring
+Test Cases
 """
 import unittest
 from heap_lab import MaxHeap
@@ -7,11 +7,11 @@ from heap_lab import MaxHeap
 
 class TestHeap(unittest.TestCase):
     """
-    Docstring
+    Test Cases for Heaps
     """
     def test_insert(self):
         """
-        Docstring
+        Test for Insert Function
         """
         heap = MaxHeap(10)
         self.assertTrue(heap.is_empty())
@@ -23,7 +23,7 @@ class TestHeap(unittest.TestCase):
 
     def test_insert2(self):
         """
-        Docstring
+        Test for Insert Function 2
         """
         heap = MaxHeap()
         heap.insert(15)
@@ -37,7 +37,7 @@ class TestHeap(unittest.TestCase):
 
     def test_findmax(self):
         """
-        Docstring
+        Test for Finding Max Value
         """
         heap = MaxHeap(10)
         for i in range(10):
@@ -46,7 +46,7 @@ class TestHeap(unittest.TestCase):
 
     def test_get(self):
         """
-        Docstring
+        Test Get Functions
         """
         heap = MaxHeap(10)
         for i in range(9):
@@ -59,7 +59,7 @@ class TestHeap(unittest.TestCase):
 
     def test_delete(self):
         """
-        Docstring
+        Test Delete Function
         """
         heap = MaxHeap(10)
         for i in range(9):
@@ -69,7 +69,7 @@ class TestHeap(unittest.TestCase):
 
     def test_delete2(self):
         """
-        Docstring
+        Test Delete Function 2
         """
         heap = MaxHeap()
         heap.insert(103)
@@ -86,7 +86,7 @@ class TestHeap(unittest.TestCase):
 
     def test_dupli(self):
         """
-        Docstring
+        Test Build Function with Duplicates
         """
         heap = MaxHeap()
         testlist = [24, 12, 34, 45, 67, 21, 21, 21, 3, 4, 100]
@@ -102,12 +102,22 @@ class TestHeap(unittest.TestCase):
 
     def test_build(self):
         """
-        Docstring
+        Test Build Function with Basic List
         """
         heap = MaxHeap()
         testlist = [0, 1, 2, 3, 4, 5, 6, 7, 8]
         self.assertTrue(heap.build_heap(testlist))
         self.assertEqual(heap.heap_contents(), [8, 7, 6, 3, 4, 5, 2, 1, 0])
+
+    def test_sorts(self):
+        """
+        Testing Heap Sort Function
+        """
+        heap = MaxHeap()
+        testlist = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+        templist = testlist[:]
+        templist.sort()
+        self.assertEqual(heap.heap_sort_increase(testlist), templist)
 
 
 if __name__ == "__main__":
