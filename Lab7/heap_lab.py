@@ -56,9 +56,19 @@ class MaxHeap(object):
 
     def build_heap(self, alist):
         """
-        docstring
+        Return True/False if build was successful. I.E. Returns
+        False if list exceeds capacity of heap.
         """
-        pass
+        if self.get_heap_cap() < len(alist):
+            return False
+        index = 1
+        for i in alist:
+            self.heaplist[index] = alist[index-1]
+            index += 1
+            self.size += 1
+        for i in range(self.get_heap_size()//2, 0, -1):
+            self.perc_down(i)
+        return True
 
     def is_empty(self):
         """
@@ -93,17 +103,30 @@ class MaxHeap(object):
         Function that moves
         elements in Heap down.
         """
-        while (i * 2) <= self.size and (i * 2 + 1) <= self.size:
-            if self.heaplist[i * 2] >= self.heaplist[i * 2 + 1]:
-                temp = self.heaplist[i * 2]
-                self.heaplist[i * 2] = self.heaplist[i]
-                self.heaplist[i] = temp
-                i = i * 2
-            else:
-                temp = self.heaplist[i * 2 + 1]
-                self.heaplist[i * 2 + 1] = self.heaplist[i]
-                self.heaplist[i] = temp
-                i = i * 2 + 1
+        current = self.heaplist[i]
+        firstchild = self.heaplist[i * 2]
+        secondchild = self.heaplist[i * 2 + 1]
+        if current <= firstchild or current <= secondchild:
+            while (i * 2) <= self.size and (i * 2 + 1) <= self.size:
+                if current <= firstchild or current <= secondchild:
+                    if firstchild > secondchild:
+                        temp = self.heaplist[i * 2]
+                        self.heaplist[i * 2] = self.heaplist[i]
+                        self.heaplist[i] = temp
+                        i = i * 2
+                        current = self.heaplist[i]
+                        firstchild = self.heaplist[i * 2]
+                        secondchild = self.heaplist[i * 2 + 1]
+                    else:
+                        temp = self.heaplist[i * 2 + 1]
+                        self.heaplist[i * 2 + 1] = self.heaplist[i]
+                        self.heaplist[i] = temp
+                        i = i * 2 + 1
+                        current = self.heaplist[i]
+                        firstchild = self.heaplist[i * 2]
+                        secondchild = self.heaplist[i * 2 + 1]
+                else:
+                    break
 
     def perc_up(self, i):
         """
