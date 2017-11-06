@@ -190,5 +190,3 @@ def create_freq_list(countlist):
 				nodelist.append(HuffmanNode(i,countlist[i]))
 	return nodelist
 
-
-cnt_freq('file1.txt')
