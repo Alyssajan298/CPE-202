@@ -11,7 +11,10 @@ class MyHashTable(object):
         """
         Initialize the Hash Table
         """
-        pass
+        self.tsize = table_size
+        self.hashlist = []
+        for i in range(table_size):
+            self.hashlist.append(None)
 
     def insert(self, key, item):
         """
@@ -48,3 +51,6 @@ class MyHashTable(object):
         Returns number of collisions during insertions
         """
         pass
+hashbrown = MyHashTable()
+print(hashbrown.tsize)
+print(hashbrown.hashlist)
