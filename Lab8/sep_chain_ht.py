@@ -14,6 +14,7 @@ class MyHashTable(object):
         self.tsize = table_size
         self.count = 0
         self.hashlist = []
+        self.collide = 0
         for i in range(table_size):
             self.hashlist.append([])
 
@@ -21,9 +22,12 @@ class MyHashTable(object):
         """
         Insert Function that takes a key and item
         """
-        if self.count / self.tsize == 1.5:
+        if self.load_factor() == 1.5:
             self.rehash()
         index = key % self.tsize
+        checkcoll = len(self.hashlist[index])
+        if checkcoll > 0:
+            self.collide += 1
         self.hashlist[index].append((key, item))
         self.count += 1
 
@@ -51,16 +55,16 @@ class MyHashTable(object):
         """
         Returns number of pairs in the Hash Table
         """
-        pass
+        return self.count
 
     def load_factor(self):
         """
         Returns current load factor
         """
-        pass
+        return self.count / self.tsize
 
     def collisions(self):
         """
         Returns number of collisions during insertions
         """
-        pass
+        return self.collide
