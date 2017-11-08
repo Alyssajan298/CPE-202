@@ -56,7 +56,17 @@ class MyHashTable(object):
         """
         Removes item, key pair and returns it
         """
-        pass
+        index = key % self.tsize
+        i = 0
+        hashsize = len(self.hashlist[index])
+        searchlist = self.hashlist[index]
+        while i < hashsize:
+            if (searchlist[i])[0] == key:
+                temp = searchlist[i]
+                del searchlist[i]
+                return temp
+            i += 1
+        raise LookupError
 
     def size(self):
         """
