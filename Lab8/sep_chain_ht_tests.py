@@ -20,6 +20,9 @@ class TestHash(unittest.TestCase):
         with self.assertRaises(LookupError):
             hashtbl.get(6)
         self.assertEqual(hashtbl.size(), 1)
+        self.assertEqual(hashtbl.collisions(), 0)
+        self.assertEqual(hashtbl.load_factor(), 0.2)
+
 
 if __name__ == "__main__":
     unittest.main()
