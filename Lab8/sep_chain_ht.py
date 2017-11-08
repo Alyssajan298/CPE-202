@@ -25,10 +25,15 @@ class MyHashTable(object):
         if self.load_factor() == 1.5:
             self.rehash()
         index = key % self.tsize
-        checkcoll = len(self.hashlist[index])
-        if checkcoll > 0:
-            self.collide += 1
-        self.hashlist[index].append((key, item))
+        if self.duplicate(key):
+            for i in self.hashlist[index]:
+                if i[0] == key:
+                    i[1] = item
+                    self.collisions += 1
+        else:
+            if len(self.hashlist[index]) > 0:
+                self.collisions += 1
+            self.hashlist[index].append((key, item))
         self.count += 1
 
     def rehash(self):
@@ -36,7 +41,32 @@ class MyHashTable(object):
         Rehases the Hash Table
         to accomodate for size
         """
-        pass
+        oldhash = self.hashlist
+        newhash = MyHashTable(self.tsize * 2 + 1)
+        self.tsize = newhash.tsize
+        self.count = 0
+        self.hashlist = []
+        for i in range(self.tsize):
+            self.hashlist.append([])
+        for index0 in range(len(oldhash)):
+            for index1 in (oldhash)[index0]:
+                index = index1[0] % self.tsize
+                self.hashlist[index].append((index1[0], index1[1]))
+                self.count += 1
+
+    def duplicate(self, key):
+        """
+        Helper Function
+        Checks for Duplicates
+        """
+        index = key % self.tsize
+        i = 0
+        hashsize = len(self.hashlist[index])
+        searchlist = self.hashlist[index]
+        while i < hashsize:
+            if (searchlist[i])[0] == key:
+                return True
+        return False
 
     def get(self, key):
         """
