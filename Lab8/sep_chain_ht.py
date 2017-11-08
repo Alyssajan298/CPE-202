@@ -31,6 +31,13 @@ class MyHashTable(object):
         self.hashlist[index].append((key, item))
         self.count += 1
 
+    def rehash(self):
+        """
+        Rehases the Hash Table
+        to accomodate for size
+        """
+        pass
+
     def get(self, key):
         """
         Uses given key to find and return the item, key pair
