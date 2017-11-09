@@ -22,19 +22,19 @@ class MyHashTable(object):
         """
         Insert Function that takes a key and item
         """
-        if self.load_factor() == 1.5:
+        if self.load_factor() > 1.5:
             self.rehash()
         index = key % self.tsize
+        inner = self.hashlist[index]
         if self.duplicate(key):
-            for i in self.hashlist[index]:
-                if i[0] == key:
-                    i[1] = item
-                    self.collisions += 1
+            for i in range(len(self.hashlist[index])):
+                if inner[i][0] == key:
+                    inner[i] = (key, item)
         else:
-            if len(self.hashlist[index]) > 0:
-                self.collisions += 1
+            if len(inner) > 0:
+                self.collide += 1
             self.hashlist[index].append((key, item))
-        self.count += 1
+            self.count += 1
 
     def rehash(self):
         """
@@ -66,6 +66,7 @@ class MyHashTable(object):
         while i < hashsize:
             if (searchlist[i])[0] == key:
                 return True
+            i += 1
         return False
 
     def get(self, key):
@@ -94,6 +95,7 @@ class MyHashTable(object):
             if (searchlist[i])[0] == key:
                 temp = searchlist[i]
                 del searchlist[i]
+                self.count -= 1
                 return temp
             i += 1
         raise LookupError

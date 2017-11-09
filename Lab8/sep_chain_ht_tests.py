@@ -2,6 +2,7 @@
 Test Cases
 """
 import unittest
+from random import randint
 from sep_chain_ht import MyHashTable
 
 
@@ -22,7 +23,36 @@ class TestHash(unittest.TestCase):
         self.assertEqual(hashtbl.size(), 1)
         self.assertEqual(hashtbl.collisions(), 0)
         self.assertEqual(hashtbl.load_factor(), 0.2)
+    
+    def test_hash2(self):
+        """
+        Tests Hash Table #2
+        """
+        hashtbl = MyHashTable()
+        hashtbl.insert(20, 15)
+        self.assertEqual(hashtbl.get(20), (20, 15))
+        hashtbl.insert(20, 45)
+        self.assertEqual(hashtbl.get(20), (20, 45))
+        self.assertEqual(hashtbl.size(), 1)
+        self.assertEqual(hashtbl.remove(20), (20, 45))
+        self.assertEqual(hashtbl.size(), 0)
+        self.assertEqual(hashtbl.collisions(), 0)
+        hashtbl.insert(20, 15)
+        hashtbl.insert(9, 67)
+        self.assertEqual(hashtbl.get(9), (9, 67))
+        self.assertEqual(hashtbl.size(), 2)
+        self.assertEqual(hashtbl.remove(9), (9, 67))
+        self.assertEqual(hashtbl.collisions(), 1)
 
+    def test_random(self):
+        """
+        Tests Random Hash
+        """
+        hashtbl = MyHashTable(5)
+        for x in range(21):
+            y = randint(0, 100)
+            z = randint(0, 10)
+            hashtbl.insert(y, z)
 
 if __name__ == "__main__":
     unittest.main()
