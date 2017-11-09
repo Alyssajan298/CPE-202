@@ -26,13 +26,19 @@ class MyHashTable(object):
             self.rehash()
         index = key % self.tsize
         inner = self.hashlist[index]
+        collidetrack = len(self.hashlist[index])
         if self.duplicate(key):
             for i in range(len(self.hashlist[index])):
                 if inner[i][0] == key:
+                    collidetrack = len(inner[:i+1])
+                    while collidetrack > 0:
+                        self.collide += 1
+                        collidetrack -= 1
                     inner[i] = (key, item)
         else:
-            if len(inner) > 0:
+            while collidetrack > 0:
                 self.collide += 1
+                collidetrack -= 1
             self.hashlist[index].append((key, item))
             self.count += 1
 

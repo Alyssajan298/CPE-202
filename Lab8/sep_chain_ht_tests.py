@@ -36,13 +36,13 @@ class TestHash(unittest.TestCase):
         self.assertEqual(hashtbl.size(), 1)
         self.assertEqual(hashtbl.remove(20), (20, 45))
         self.assertEqual(hashtbl.size(), 0)
-        self.assertEqual(hashtbl.collisions(), 0)
+        self.assertEqual(hashtbl.collisions(), 1)
         hashtbl.insert(20, 15)
         hashtbl.insert(9, 67)
         self.assertEqual(hashtbl.get(9), (9, 67))
         self.assertEqual(hashtbl.size(), 2)
         self.assertEqual(hashtbl.remove(9), (9, 67))
-        self.assertEqual(hashtbl.collisions(), 1)
+        self.assertEqual(hashtbl.collisions(), 2)
 
     def test_random(self):
         """
@@ -65,7 +65,7 @@ class TestHash(unittest.TestCase):
         hashtbl.insert(40, 'tomato')
         hashtbl.insert(1, 'teeth')
         hashtbl.insert(11, 'eyes')
-        self.assertEqual(hashtbl.collisions(), 4)
+        self.assertEqual(hashtbl.collisions(), 7)
 
 
 if __name__ == "__main__":
