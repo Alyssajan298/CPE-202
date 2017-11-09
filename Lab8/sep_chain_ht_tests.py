@@ -54,5 +54,19 @@ class TestHash(unittest.TestCase):
             z = randint(0, 10)
             hashtbl.insert(y, z)
 
+    def test_collision(self):
+        """
+        Tests Collision Cases
+        """
+        hashtbl = MyHashTable(10)
+        hashtbl.insert(10, 'apple')
+        hashtbl.insert(20, 'banana')
+        hashtbl.insert(30, 'pineapple')
+        hashtbl.insert(40, 'tomato')
+        hashtbl.insert(1, 'teeth')
+        hashtbl.insert(11, 'eyes')
+        self.assertEqual(hashtbl.collisions(), 4)
+
+
 if __name__ == "__main__":
     unittest.main()
