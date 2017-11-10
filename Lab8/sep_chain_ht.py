@@ -22,7 +22,7 @@ class MyHashTable(object):
         """
         Insert Function that takes a key and item
         """
-        if self.load_factor() > 1.5:
+        if self.load_factor() + 1/self.tsize > 1.5:
             self.rehash()
         index = key % self.tsize
         inner = self.hashlist[index]
@@ -41,7 +41,7 @@ class MyHashTable(object):
                 collidetrack -= 1
             self.hashlist[index].append((key, item))
             self.count += 1
-
+    
     def rehash(self):
         """
         Rehases the Hash Table

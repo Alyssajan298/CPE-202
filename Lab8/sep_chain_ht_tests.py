@@ -54,6 +54,20 @@ class TestHash(unittest.TestCase):
             z = randint(0, 10)
             hashtbl.insert(y, z)
 
+    def test_rehash(self):
+        """
+        Tests Rehash
+        """
+        hashtbl = MyHashTable(3)
+        hashtbl.insert(3, 15)
+        hashtbl.insert(4, 51)
+        hashtbl.insert(5, 72)
+        hashtbl.insert(9, 67)
+        hashtbl.insert(10, 56)
+        self.assertEqual(len(hashtbl.hashlist), 7)
+        hashtbl.insert(21, 67)
+        self.assertEqual(hashtbl.collisions(), 2)
+
     def test_collision(self):
         """
         Tests Collision Cases
