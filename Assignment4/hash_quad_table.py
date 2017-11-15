@@ -2,7 +2,7 @@
 Implementation of Quadratic Probing
 Hash Table
 """
-class HashTableLinPr:
+class HashTableQuadPr:
     """
     Quadratic Hash Class
     """
