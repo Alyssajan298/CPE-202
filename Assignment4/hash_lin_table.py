@@ -2,6 +2,7 @@
 Implementation of Linear Probing
 Hash Table
 """
+import string
 
 
 class HashTableLinPr(object):
@@ -83,6 +84,31 @@ class HashTableLinPr(object):
             if index == original:
                 return False
 
+    def get_lines(self, key):
+        """
+        Uses given key to find and return the item, key pair
+        """
+        pair = self.get(key)
+        return pair[1]
+
+    def get(self, key):
+        """
+        Returns
+        Pair
+        """
+        index = self.myhash(key, self.tsize)
+        original = self.myhash(key, self.tsize)
+        hashsize = self.tsize
+        searchlist = self.hashlist
+        while index < hashsize:
+            if searchlist[index] is not None:
+                if (searchlist[index])[0] == key:
+                    return (key, searchlist[index][1])
+            index += 1
+            index %= self.tsize
+            if index == original:
+                raise LookupError
+
     def rehash(self):
         """
         Rehases the Hash Table
@@ -125,7 +151,34 @@ class HashTableLinPr(object):
         """
         Read File, Hashes into Table, and Filters Stop Words
         """
-        pass
+        f = open(filename)
+        skip = True
+        num = 1
+        word = ''
+        while True:
+            character = f.read(1)
+            if not character:
+                break
+            elif character is "'":
+                pass
+            elif character in string.ascii_letters or character in string.digits:
+                word = word + character
+                skip = False
+            elif not skip:
+                skip = True
+                self.decide_to_insert_conditionally(word, stoptable, num)
+                if character is '\n':
+                    num += 1
+                word = ''
+        self.decide_to_insert_conditionally(word, stoptable, num)
+        f.close()
+
+    def decide_to_insert_conditionally(self, word, stoptable, num):
+        try:
+            float(word)
+        except:
+            if stoptable is None or not stoptable.contains(word):
+                self.insert(word.lower(), num)
 
     def get_tablesize(self):
         """
@@ -137,7 +190,22 @@ class HashTableLinPr(object):
         """
         Saves Concordance
         """
-        pass
+        ofile = open(outputfilename, "w")
+        firstline = True
+        sortedlist = []
+        for tup in self.hashlist:
+            if tup is not None:
+                sortedlist.append(tup)
+        sortedlist = sorted(sortedlist)
+        for tup in sortedlist:
+            if firstline:
+                firstline = False
+            else:
+                ofile.write("\n")
+            ofile.write(tup[0] + ":")
+            for num in tup[1]:
+                ofile.write("\t" + str(num))
+        ofile.close()
 
     def get_load_fact(self):
         """
