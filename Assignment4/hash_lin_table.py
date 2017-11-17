@@ -174,6 +174,8 @@ class HashTableLinPr(object):
         f.close()
 
     def decide_to_insert_conditionally(self, word, stoptable, num):
+        if len(word) is 0:
+            return
         try:
             float(word)
         except:
