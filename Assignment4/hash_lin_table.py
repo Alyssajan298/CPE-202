@@ -26,45 +26,23 @@ class HashTableLinPr(object):
         if self.get_load_fact() + 1/self.tsize > 0.5:
             self.rehash()
         index = self.myhash(key, self.tsize)
-        i = 0
         if item is not None:
-            if self.duplicate(key):
-                while i < len(self.hashlist):
-                    if self.hashlist[i] is not None:
-                        if self.hashlist[i][0] == key:
-                            self.hashlist[i][1].append(item)
-                            break
-                    i += 1
-                    i %= self.tsize
-            else:
-                while self.hashlist[index] is not None:
-                    index += 1
-                    index %= self.tsize
+            
+            while self.hashlist[index] != None and self.hashlist[index][0] != key:
+                index += 1
+                index %= self.tsize
+
+            if self.hashlist[index] == None:
                 self.hashlist[index] = ((key, [item]))
+                self.count += 1
+            elif self.hashlist[index] is not None and item not in self.hashlist[index][1]:
+                self.hashlist[index][1].append(item)
         else:
             while self.hashlist[index] is not None:
                 index += 1
                 index %= self.tsize
             self.hashlist[index] = (key, None)
-        self.count += 1
-
-    def duplicate(self, key):
-        """
-        Helper Function
-        Checks for Duplicates
-        """
-        index = self.myhash(key, self.tsize)
-        original = self.myhash(key, self.tsize)
-        hashsize = self.tsize
-        searchlist = self.hashlist
-        while index < hashsize:
-            if searchlist[index] is not None:
-                if (searchlist[index])[0] == key:
-                    return True
-            index += 1
-            index %= self.tsize
-            if index == original:
-                return False
+            self.count += 1
 
     def contains(self, key):
         """
