@@ -164,7 +164,7 @@ class HashTableLinPr(object):
             elif character in string.ascii_letters or character in string.digits:
                 word = word + character
                 skip = False
-            elif not skip:
+            elif not skip or character is '\n':
                 skip = True
                 self.decide_to_insert_conditionally(word, stoptable, num)
                 if character is '\n':
