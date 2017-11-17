@@ -1,0 +1,6 @@
+african:	9
+american:	9
+consuming:	9
+earthquake:	9
+punctuation:	3
+quicksorts:	9

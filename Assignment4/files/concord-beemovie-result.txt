@@ -1,0 +1,1195 @@
+24b:	3983
+80s:	[[1545]]
+83rd:	[[686]]
+abort:	3542
+aborting:	3545
+absolutely:	[[743]]	4087
+absurd:	[3310]
+account:	4095
+action:	[2251]
+actor:	[1807]
+actual:	[2366]
+actually:	[1279]	2480	3298	3773
+adam:	41	83	143	325	2407	3118	3146	3238	3549
+addicted:	[3373]
+adjusted:	[[[[223]]]]
+adrenaline:	[3209]
+ads:	[2907]
+advancement:	[[[260]]]
+advantage:	[2362]
+advisory:	[[715]]
+affect:	3642
+affects:	3652
+affirmative:	870	908	4316
+afternoon:	3979	4462	4498
+aftertaste:	[3004]
+agreed:	[2859]
+ahead:	[[1656]]
+aim:	4308	4367
+aiming:	4336
+airport:	3882	4059
+alaska:	[1947]
+alert:	[[[443]]]
+allergic:	1076	1099	3050
+amazing:	845	1454	1455	3599
+amusement:	[[[[133]]]]
+anchor:	[2257]
+angel:	[3150]
+angry:	[1757]
+animal:	3653
+animals:	[[[520]]]
+ant:	[[[547]]]
+antennae:	[554]	768
+antennas:	[[[[183]]]]
+antonio:	[2200]	3568
+anybody:	[1774]	4453
+anyones:	[[685]]
+anyway:	[[13]]	1254	1369	1400	1441
+anywhere:	4404	4502
+approach:	[[[349]]]
+appropriate:	[2672]
+approved:	4466
+arent:	[411]	1622	3094	3105
+arousing:	3879
+artie:	[[[[109]]]]
+artificial:	2435	2996
+aspect:	[[[[248]]]]
+associate:	4485
+assume:	[2020]
+assuming:	[3276]
+athletic:	[[1711]]
+attack:	[1542]	2354
+attempting:	4073
+attendants:	[[[610]]]
+attorney:	3969	3970
+authorities:	[[[443]]]
+autograph:	[[[446]]]
+automatic:	[2099]
+automatically:	[[[[222]]]]
+autopilot:	4174
+available:	579	607	4404
+aviation:	[[[[2]]]]
+aware:	[3475]
+babbling:	[[735]]
+babyll:	3869
+backhands:	[2361]
+badfella:	[2780]
+balance:	[3425]
+bald:	3997
+balloon:	[[520]]	2429
+balls:	[2849]
+balm:	[2227]
+band:	[2703]
+barely:	[[1630]]
+barricade:	[2498]
+barrier:	[3008]
+barry:	28	40	79	84	108	461	531	652	653	656	1340	1431	1612	1637	1644	1838	2159	2187	2204	2273	2295	2483	2519	2832	2856	2881	3023	3097	3431	3437	3685	3734	3755	3934	3976	4031	4054	4066	4070	4170	4271	4352	4376	4384	4431	4447	4480	4501	4509	4517
+base:	3546
+bats:	[[727]]
+battery:	[2828]
+beams:	[2582]
+bear:	[[428]]	2346	2671	2678	2799	3468
+beards:	[2254]
+bears:	[727]	2155	2684
+beast:	[3135]
+bedbug:	[3082]
+bee:	5	13	147	207	249	275	476	575	630	645	742	952	959	995	1064	1149	1203	1223	1227	1228	1331	1500	1524	1525	1597	1598	1601	1602	1605	1606	1615	1630	1695	1801	1972	1993	2007	2061	2148	2230	2254	2273	2284	2306	2307	2320	2325	2369	2377	2505	2519	2572	2599	2656	2717	2968	2972	3023	3056	3085	3090	3104	3352	3360	3448	3457	3490	3790	3960	4001	4038	4091	4104	4148	4271	4274	4275	4278	4279	4296	4297	4304	4305	4313	4466	4520	4539	4542
+beekeeper:	[2651]
+beekeepers:	[2647]
+beep:	4167
+beer:	[[731]]
+bees:	16	154	252	276	297	330	403	719	895	1250	1740	1823	1844	1897	2027	2079	2197	2209	2302	2422	2445	2533	2603	2667	2668	2684	2767	2873	2983	3046	3108	3167	3253	3256	3259	3260	3291	3366	3389	3392	3395	3398	3401	3417	3632	3635	3641	3646	3741	3798	4129	4144	4343	4418	4422	4450
+begins:	170	215
+bejesus:	[2307]
+belated:	[2742]
+belong:	[3417]
+benefit:	[2554]
+benson:	2273	2295	2519	2532	2559	2592	2775	3023	3056	3105	3425	4031	4066	4094	4247
+bet:	[1793]
+billion:	[2493]
+birth:	[3089]
+bit:	[[139]]	827	842	1202	2453	3926
+biting:	[2691]
+blacktop:	4262
+blade:	1968	1969
+blend:	3876
+blew:	[[310]]	3185
+blinked:	[[970]]
+bloome:	3824	3983	4012
+blossom:	[1801]
+blow:	2757	2776
+blows:	[1948]
+bluffing:	[2942]
+bob:	2257	2269	4058
+body:	[[[[10]]]]	4115
+bogus:	[3497]
+bored:	[[[496]]]
+born:	[2550]
+borrow:	[2881]
+bothering:	[1774]
+bottom:	1853	1856	2342
+bounty:	[2554]
+bouquets:	[2429]
+brave:	[[685]]
+brazenly:	[2151]
+bread:	[[1574]]
+breakfast:	[[[[28]]]]
+breathe:	[3504]
+breaths:	[2103]
+bred:	[[[392]]]
+briefcase:	4495
+bring:	[[216]]	762	817	2069	3507	4293
+bringing:	[[823]]
+britches:	[2569]
+brochure:	1007	1092	1102
+brooms:	[[723]]
+bs:	[[[[62]]]]
+bubble:	[[[[223]]]]
+bud:	3791
+buddy:	[3174]
+bug:	1771	2929
+bugging:	[2979]
+bugs:	1990	2976	3224	3302
+bumble:	2257	2269	4058
+bumbleton:	[2512]
+business:	3827
+businesses:	[3318]
+busted:	[1877]
+busy:	[2391]
+buttocks:	[3154]
+buzz:	749	750	2263
+buzzwell:	[[[157]]]	3516
+buzzy:	[[[475]]]
+bye:	[[76]]	1115	1123	1127	1692	2397
+cafeteria:	[3195]
+cake:	[[1282]]
+calories:	[[1126]]
+campaign:	[[1366]]
+camps:	3377	3457
+candy:	[2314]	3815
+cannot:	[[719]]	4181
+cant:	[[45]]	795	1047	1153	1159	1165	1289	1347	1444	1462	1515	1689	2299	2489	2914	3138	3147	3206	3332	3589	3719	4044	4209	4265	4502
+cantjust:	[[[391]]]
+capable:	[[1089]]
+capture:	[2578]
+car:	[[952]]
+card:	[[[62]]]	3385
+career:	[[[[170]]]]
+carob:	[[1122]]
+case:	2321	3163	3185	3263	3322	3332
+casually:	[2717]
+celebrate:	[[[550]]]
+celebrating:	3559
+center:	4367
+century:	[2325]
+ceremonies:	[[[[167]]]]
+chance:	[[614]]	1972	3707	4191	4407
+cheering:	[[1707]]
+cheese:	4469
+chill:	[2502]
+chips:	[[1122]]
+choice:	318	600	2129
+choices:	[[[492]]]
+chopsticks:	[2860]
+churning:	[2756]
+chute:	[[1451]]
+cicada:	[[735]]
+cinnamon:	[[1574]]
+circular:	[1778]
+circumstances:	[[[[140]]]]
+class:	[[[[161]]]]
+clean:	[1976]
+clients:	[3317]
+cloudy:	4268
+coaster:	[2987]
+cockpit:	3984
+coffee:	1274	1397	1401
+collectively:	[2526]
+collector:	[[830]]
+colored:	[2336]
+combined:	3780
+community:	2031	2320
+compadres:	4095
+compelling:	[3313]
+compete:	[[1711]]
+competition:	[2416]
+complete:	3321	3456
+completely:	3773
+comrades:	[[[450]]]
+concentrate:	4202
+concludes:	[[[[167]]]]
+congratulations:	[2742]
+considered:	[3027]
+conspiracy:	[2169]
+constantly:	[[[[245]]]]
+contoured:	[[[[223]]]]
+contraption:	[3356]
+controls:	4084
+coolest:	[[876]]
+cooling:	[[644]]	1830
+coordinator:	[[649]]
+copilot:	4020
+copy:	4192
+corrected:	[[[[222]]]]
+correctly:	[3276]
+cotton:	3815
+couldnt:	[1407]	2217	2660	3011	3359	3666
+counting:	[[[575]]]
+county:	[2273]
+couple:	730	1293	2103	3224	3931
+court:	2787	3157	3272	3401
+cousin:	[[[237]]]	1792
+cousins:	[241]	411	3111
+crashing:	[2687]
+crazy:	679	1470	1473	1474	1948	2069	2201
+cream:	4469
+creatures:	[2675]
+creep:	1775	2784
+crew:	4077
+cricket:	[2200]	3568
+crime:	[2760]
+crowds:	[[1707]]
+crud:	[[588]]	2874
+crumb:	1417	1562
+cup:	[[1279]]
+cups:	[1397]	2226	3516
+da:	[3500]
+dad:	486	511	2212
+dada:	[[1243]]
+daffodil:	[2449]
+daisies:	[[856]]
+damage:	4098
+dangerous:	[[[424]]]
+dash:	[[838]]
+date:	[3111]
+dated:	[2200]
+dating:	1535	1538
+dave:	[[1451]]
+dawg:	[[[558]]]
+deadified:	[[[634]]]
+deady:	[[[634]]]
+dean:	[[[[157]]]]
+decide:	391	489	1689
+decision:	[[[322]]]	4554
+decisions:	[[1625]]
+decks:	[[699]]
+dee:	[3500]
+degrees:	817	823
+deli:	[[686]]
+demand:	3453	3456	3467
+denouncing:	[3108]
+depends:	[[[479]]]
+desk:	[[576]]	2257	3582
+destruction:	[3135]
+detail:	3545
+developing:	4063
+devilishly:	[2753]
+diabolical:	[[1026]]
+didnt:	[291]	1250	2824	2831	3185	3641
+difference:	294	313	4137
+different:	[[105]]	1337
+dirty:	[2955]
+disaster:	3759
+disconcerting:	[[1199]]
+discussing:	[2288]
+disease:	1733	1734
+dismissal:	[3321]
+distinctive:	[[[[229]]]]
+distinguished:	[[[[154]]]]
+disturbing:	[2652]
+divine:	[2551]
+division:	[[[[192]]]]
+doctored:	[2170]
+documentary:	[3085]
+doesnt:	[1672]	2121	2783	3089	3188	3235	3623
+doggone:	[1976]
+dogs:	[[726]]
+doing:	388	440	497	976	1153	1207	2805	2863	2878	2958	3599	3872	3966	4130
+dollar:	[2493]
+dont:	16	124	136	344	366	381	856	879	929	966	1013	1036	1053	1073	1089	1195	1264	1265	1268	1278	1297	1303	1343	1478	1659	1676	1715	1718	1730	1815	1844	1892	1990	2054	2490	2502	2655	2667	2768	2863	2961	2962	3041	3046	3111	3118	3231	3239	3253	3256	3259	3295	3563	3592	3603	3783	3963	3973	4195	4241	4287	4360	4466	4470
+dots:	[2336]
+downtown:	[2472]
+drag:	[2136]
+dragonfly:	[2051]
+drain:	[789]	2885
+drapes:	[[1023]]
+dream:	[[1703]]
+dreaming:	[[1192]]
+driving:	[[956]]
+dude:	[2946]
+dumb:	[1740]
+dustbuster:	3993
+dying:	3704	4535
+dynamite:	[[1546]]
+earned:	4434
+easy:	4319
+eighth:	[[1546]]
+elastic:	[2569]
+elected:	[[1365]]
+em:	[2343]
+emmy:	[2745]
+emotional:	[2987]
+employ:	[2655]
+employment:	[2873]
+engines:	4041	4312
+entire:	[3322]	3653	3894	3963
+equals:	[3139]
+er:	[2746]
+ers:	[2656]
+events:	[[1711]]
+evidence:	3314	3336
+exactly:	[3060]
+excited:	[[[[55]]]]	3579
+excuse:	4484
+exhausting:	[1718]
+explain:	[3206]
+exploiting:	[2767]
+faculty:	[[[[154]]]]
+fairy:	3861
+fake:	2125	2445
+familiar:	4094
+fantastic:	[[1029]]
+farm:	[2550]
+farms:	1917	1943	2637	2648
+faster:	[1719]
+fatal:	[1747]
+fathers:	[[1638]]
+fault:	3629	3669	3759
+favor:	[3401]
+felled:	[3134]
+fiasco:	3866
+filthy:	[3471]
+finally:	[1317]	3417
+finds:	[3401]
+flabbergasted:	[[1047]]
+flames:	[2923]
+flayman:	3279	3325
+flies:	[[[[13]]]]
+float:	[[1706]]	3837	3889
+floats:	3815
+floral:	3827
+florist:	1358	1532	1535	2808	4013
+florists:	[[1703]]
+flower:	867	883	3769	3791	4308	4322	4331	4335	4336	4340	4385	4388	4389
+flowered:	4339
+flowers:	789	810	849	862	929	1362	1699	1707	2428	2435	2920	3645	3704	3737	3741	3803	3815	3934	4074	4080	4247	4403	4411
+flush:	[2939]
+fly:	[[6]]	719	986	989	992	1715	3291	3359	4044	4105	4181	4353	4377	4514	4530
+flying:	[80]	387	1314	1541	4005	4238	4357
+fold:	[[1007]]
+food:	1816	2494	2526
+fool:	[[1172]]
+force:	[[[349]]]
+forcibly:	[3373]
+forever:	[[[317]]]
+former:	[2287]
+formula:	[[[[219]]]]
+fozzie:	[2678]
+frankie:	[[[[112]]]]
+freak:	3963
+freaks:	[[[377]]]
+freeze:	[967]	1726
+fried:	[2986]
+frosting:	[1574]	2411
+fruits:	3646
+ftd:	3824
+fun:	[[[421]]]	3904
+functioning:	[[[334]]]
+funeral:	[[[[116]]]]
+fuzz:	71	87	2882
+fuzzy:	[[886]]
+gallons:	[3517]
+game:	[2848]
+games:	[2897]
+gandhi:	[2307]
+ganic:	[1835]
+garnishments:	[3501]
+gel:	[[[[87]]]]
+genius:	4389
+gets:	689	1317
+giant:	1466	1473	4041	4340	4385	4388
+gift:	3833
+girlfriend:	[2183]
+global:	[[1057]]
+glorification:	[3467]
+gnarly:	[2952]
+golden:	[[[230]]]	1801
+gonna:	539	547	679	702	914	1340	2362	3038	3384	3632	3916	4414
+goodbye:	[2990]
+goodfella:	[2779]
+gordon:	[2735]
+gotta:	983	1130	1134	1615	1682	3034	3269	3686	3794	3938	4441
+gotten:	[[[129]]]	2483
+grab:	[[[503]]]
+grabby:	[892]	2849
+graduate:	[[[[58]]]]
+graduating:	[[[[161]]]]
+graduation:	[[[[88]]]]
+granny:	[[973]]
+grasshopper:	[[[557]]]
+grateful:	[[1231]]
+greatest:	3578
+gross:	[[949]]
+group:	[[[[195]]]]
+guatemalan:	[[1325]]
+gun:	3339	3343	3346
+gusty:	449	453
+guy:	[524]	1095	1994	3115	4339
+guys:	[373]	692	892	904	2064	2618	4559
+hairy:	[2347]
+hal:	3956
+hallelujah:	[[[[151]]]]
+hang:	[34]	580	2027
+hangs:	[[[268]]]
+haphazardly:	[3291]
+happened:	[627]	663	1923	3363	3611	3990	4170
+happening:	[[[[44]]]]
+happens:	[2971]
+happiest:	[[1459]]
+harder:	[2209]
+harmless:	[3356]
+harrys:	[[[420]]]
+hate:	[1275]	2445
+havent:	[[298]]	2710	2713	3302	4111
+headed:	[1940]	4055
+heat:	[1575]	2839	2842
+heating:	[[644]]	1830
+heaving:	[3154]
+hector:	[1860]
+hed:	[2629]
+hell:	3485	3486
+hello:	[[37]]	679	756	2376	2377	2817	2821	4156	4244	4258
+helmet:	[[[[253]]]]
+helpless:	[2767]
+hercules:	[1797]
+heres:	[[[58]]]	2811	4461
+hes:	[631]	960	963	1089	1313	1447	1609	1774	2176	2968	3026	3108	3385	4019	4491
+hexagon:	[[[195]]]	2292
+hey:	83	84	355	369	483	692	1282	1860	2010	2064	3174	3175	3872
+hi:	[108]	370	959	1175
+hit:	1927	3121	3124
+hitchhiked:	[[[[102]]]]
+hitting:	[[[456]]]
+hive:	102	160	216	363	387	420	1346	1372	1541	2125	2250	2299
+hives:	[2250]
+hivo:	[1733]
+hockey:	[[726]]
+hollywood:	[2579]
+holographic:	[2578]
+homes:	[1542]	1848
+honesco:	[[[[192]]]]
+honex:	171	191	245	483
+honey:	215	233	265	515	528	536	550	849	942	1243	1634	1838	1873	1911	1917	1943	2013	2107	2111	2148	2151	2163	2223	2277	2361	2467	2519	2622	2637	2672	2961	3380	3416	3431	3460	3496	3524	3527	3539	3550	3571	3575	3600	3642	4034	4129	4410	4465
+honeybee:	[2480]
+honeybees:	[3163]
+honeyburton:	[2644]
+honeys:	2024	2600
+honron:	[2644]
+horrible:	1734	1923
+hospitals:	[1849]
+hothead:	[[[[125]]]]
+hotter:	[[1060]]
+hottest:	[[1511]]
+hover:	4159	4162	4163
+howd:	[1481]	2687
+huh:	[[[460]]]
+human:	1150	1521	1535	2183	2276	2329	2373	2718	3164	3500	3659
+humans:	[[17]]	743	1013	1462	1463	1466	1542	2162	2176	2180	2247	2310	2464	2489	3227	3574
+humming:	[[648]]
+hundreds:	[2145]
+hurry:	3987
+hurt:	[914]	2239	3359
+hurts:	[2233]
+id:	[91]	437	1408	2068	3192	3949	4191
+idiots:	[2738]
+ignacio:	[1908]
+iguana:	[1908]
+illegally:	[2281]
+illegitimate:	[3104]
+im:	55	101	117	321	345	532	547	561	618	667	792	795	855	879	956	1076	1088	1098	1153	1178	1188	1192	1198	1206	1223	1227	1231	1293	1378	1485	1508	1644	1679	1686	1853	1856	1947	1951	1987	2269	2270	2298	2310	2362	2373	2463	2467	2536	2599	2619	2731	2808	2848	2885	2932	3000	3115	3121	3219	3325	3413	3632	3711	3854	3862	3953	3969	4013	4094	4198	4206	4283	4336	4440	4480	4488	4550	4554
+imagine:	[2655]
+imagines:	[2559]
+important:	2600	2603
+impose:	[[1275]]
+impossible:	[[[[17]]]]
+improve:	[[[[248]]]]
+incapacitated:	4077
+inclusion:	[3496]
+incorporating:	[[[[132]]]]
+incredible:	[2471]
+individuals:	4084
+industries:	[[[[171]]]]
+industry:	[2519]
+inflatable:	3950
+information:	[2993]
+initial:	[[708]]
+inner:	[2756]
+insane:	[[318]]	1727	4352
+insect:	3889	4357
+inspector:	[[648]]
+intend:	[2156]
+intends:	[2276]
+interest:	[[1362]]
+interesting:	[3288]
+interview:	[[1046]]
+intrigues:	[2699]
+invented:	[2604]
+ish:	1500	1695
+isnt:	[516]	696	2486	2505	2575	2763	2779	2860	4047	4101	4166
+issues:	[2936]
+italian:	1792	2901
+itll:	[[[[187]]]]
+ive:	[359]	1156	1625	1682	1714	2894	2936	2972	3085	3269	3765	3770
+j:	[[[472]]]
+jammed:	[2028]
+janet:	[[[527]]]
+jar:	[2672]
+jars:	2013	2072
+jazz:	[[1169]]
+jealousy:	[1761]
+jeanette:	2266	2270
+jell:	4149
+jewish:	[2351]
+jfk:	4008	4059
+job:	279	286	290	317	497	523	1046	1630	3583	3909	3913	4133
+jobs:	275	568	2874	4130
+jock:	392	425	4440
+jocks:	[216]	355	369	370	4251	4513
+john:	4047
+judge:	[2512]
+jury:	2544	3037	3042
+jurys:	[2802]
+kachoo:	4356
+kasell:	[1987]
+ken:	998	1002	1119	2358	2380	2820	2856	2881	2932	2990	3008
+kenneth:	[2958]
+kenny:	4523
+keychain:	4425	4428
+keychains:	4419
+kick:	[827]	1754
+kid:	696	826	2298
+kidding:	2057	2536
+kill:	1073	1077	1210	1477	1503	1633	1990	2684
+killer:	[2243]
+kills:	3679
+kingdom:	3653
+kite:	[[804]]
+klauss:	[2636]
+knee:	[[1389]]
+knocking:	[[1111]]
+knocks:	[2104]
+knows:	[120]	387	388	933
+koo:	4356
+korean:	[[686]]
+krelman:	261	272	614	618	624	1831
+la:	[3500]
+label:	[2072]
+larry:	2284	2328
+larvi:	[2263]
+laser:	[2582]
+launch:	[[746]]
+lauren:	[3440]
+laws:	[[[[1]]]]
+lawsuits:	[2456]
+lawyer:	[[1357]]	4491
+lawyers:	2494	3027
+layton:	3033	3171
+leans:	[2350]
+learn:	[1235]	2772
+legal:	[3170]	4067
+legally:	[2805]
+lets:	[25]	421	550	782	3869	4184	4261	4546
+level:	[[979]]
+lifesaver:	4509
+lifetime:	[[[399]]]
+lightning:	4055
+lights:	4301
+likes:	[2042]
+limit:	[1785]
+lint:	[[71]]	649
+liotta:	1804	2741	2795
+lip:	[2227]
+loaded:	4074
+looks:	[[[109]]]	2335	3930
+lordy:	[3124]
+lose:	[[1293]]
+losing:	[3053]
+lou:	[[702]]
+lovable:	[2675]
+loving:	[[879]]
+luckily:	[2832]
+lucky:	[705]	2835	3908	3912
+lunch:	[1907]
+m:	[1545]	2735
+ma:	[[[[68]]]]
+maam:	[[1393]]	3830
+machine:	[3472]
+machines:	[3374]
+madison:	[[1314]]
+magazine:	3946
+magic:	[842]	3034
+major:	4554
+mall:	3946
+mama:	[[1243]]
+mamas:	[[917]]
+mamma:	[2904]
+manhattan:	[2472]
+mans:	[2551]
+marry:	[[1328]]
+marshal:	3862
+martin:	[[1641]]
+mass:	4115
+massive:	[2152]
+match:	[[939]]
+matters:	2247	3188
+mattresses:	3858
+mayday:	[[995]]
+meadow:	[[1375]]
+means:	280	480	3413	4407
+meant:	3712
+meat:	4474
+metal:	4038
+mia:	[2904]
+micrograms:	[[1293]]
+mighty:	[1797]
+miles:	457	460
+milk:	4469
+million:	[[301]]	3449	4111	4290
+millions:	[[[269]]]	4343
+mine:	[1085]	2911
+missile:	[[923]]
+mission:	[3542]
+mite:	[[652]]
+mixed:	[2173]
+mom:	4450
+money:	[[[52]]]	2108	2112
+monkeys:	[[[621]]]
+monsters:	[[[376]]]
+montgomery:	2525	2540	3018	3171
+montgomerys:	3329	3444
+moose:	1947	1994
+mooseblood:	[2065]
+moosebloods:	[2060]
+mosquito:	2035	2039	2043	2050	2054	4485
+motels:	[3234]
+moth:	[2051]
+motion:	2578	3329
+moves:	[1940]
+movies:	[[1030]]
+moving:	[[867]]
+multinational:	[2493]
+murphys:	[[734]]
+museum:	4419
+mushroom:	[[[429]]]
+mustache:	[[[[109]]]]
+n:	[1778]
+nah:	1036	1140
+nation:	3807
+natural:	4419
+nature:	2555	3370	3425
+nauseous:	[3485]
+nectar:	[216]	349	769	830	849	3545
+need:	[[136]]	856	1013	1831	1979	2965	3520	3646
+needed:	4495
+needing:	3641
+needs:	[2497]	4453
+negative:	[3490]
+negotiate:	[2565]
+nerves:	[2986]
+newbies:	[[[594]]]
+news:	1986	2251	4059
+nicest:	[2972]
+nickel:	4470
+nicknames:	[3490]
+nicotine:	[2100]
+nightmare:	4526
+nine:	[[660]]
+ninety:	[2099]
+non:	[3367]
+normal:	[[1490]]
+notjust:	3645
+nowhere:	[1930]
+nows:	4454
+npr:	[1986]
+number:	648	742	1033	2515	4555
+nurse:	[3245]
+o:	4149
+oalifornia:	3811
+oall:	[2633]
+oan:	[44]	272	1257	1414	3912	3945	4265	4462	4510	4551
+oandy:	[[898]]
+oannonball:	[3536]
+oant:	986	989	992	3504
+oaptain:	3923	3953
+oareful:	[[892]]
+oarl:	[1987]	3567
+oase:	[2515]
+oatches:	[[[265]]]
+objection:	[3114]
+obviously:	[2170]
+official:	3827
+ohapstick:	[2932]
+oheck:	[352]	1006	2089
+ohemical:	[[889]]
+ohung:	2266	2270
+oinnabon:	[[1570]]
+oity:	[[[[160]]]]
+ok:	702	712	779	1191	1431	1451	1722	1764	2118	2695	3015	3413	3758	4309
+olassy:	[2291]
+oloning:	[2586]
+onboard:	4023
+onto:	[1944]
+ooffee:	[[1265]]
+ooh:	[[[[24]]]]
+oolumbus:	[2306]
+oome:	[568]	1159	1290	4235	4271	4373
+ooming:	[[31]]	923
+oongratulations:	[[583]]	3452
+oool:	[[852]]
+oopy:	[[859]]
+oould:	[856]	3245	3749	3752
+oouple:	420	594
+oourt:	[2518]
+orazy:	[1920]
+ordinary:	[2599]
+organic:	[1834]
+orientation:	[[[[177]]]]
+orjust:	4418
+ourjob:	[[[[174]]]]
+ours:	1900	2024	3461
+oute:	[1801]
+overworked:	[2213]
+ow:	[[[[72]]]]
+pack:	[[769]]	3889
+packaging:	[2280]
+pact:	3672
+pain:	[3178]
+panicking:	4206
+panicky:	4203
+pants:	[3441]
+parade:	[[1698]]	3699	3745	3866
+parasite:	4494
+parents:	1357	1503	3094
+pasadena:	[[1699]]	3700	3811
+passengers:	3922	3979
+patch:	[456]	659
+pathetic:	[2933]
+pattern:	4357
+paw:	[[[432]]]
+pea:	3840	3844	3854	3855
+percent:	[2873]
+perfect:	[[[[62]]]]	4440
+perfectly:	[[[333]]]
+perversion:	[3424]
+petunias:	[[785]]
+photos:	[2170]
+pic:	[1778]
+pierce:	[[[553]]]
+pillows:	[2692]
+pilot:	4016	4047
+pinch:	[[841]]
+pincushion:	[3115]
+pinhead:	2080	2086
+pinheads:	[2083]
+pinned:	[[[428]]]
+plane:	4005	4044	4073	4091	4181	4192	4238	4356
+planet:	3765
+planned:	[[[384]]]
+plant:	3790
+player:	[2845]
+pointless:	[2442]
+pointy:	[2350]
+poison:	[3151]
+police:	2703	2707
+pollen:	[215]	355	391	398	425	575	837	848	3741	3787	3802	3909	3913	4251	4400	4440
+pollinate:	4411
+pollination:	[833]	2442	3545	3662
+pomp:	[[[[139]]]]
+pond:	[[1378]]
+poo:	[2949]
+poodle:	[[1482]]
+pool:	[[1609]]
+positions:	[[746]]
+possession:	3894
+possibly:	[[1444]]
+pour:	[[[268]]]
+pourer:	[[[645]]]
+pouring:	[[[575]]]
+prance:	2722	3493
+predicted:	[[1057]]
+prefer:	[2996]
+presented:	[3313]
+presiding:	[2512]
+previous:	3780
+princess:	3840	3843
+private:	[1804]
+privilege:	[2529]
+problem:	901	1612	4505
+proceed:	[2537]
+produce:	3652
+products:	[3497]
+profit:	[2073]
+profiting:	[2280]
+proof:	[3335]
+protect:	[2607]
+provide:	[2647]
+psychotic:	[2438]
+puddle:	[[[464]]]
+puff:	[[1105]]
+puffs:	[2099]
+pulling:	4287
+pulsating:	4340
+putting:	[[1389]]
+quadrant:	[[660]]
+queen:	[1365]	2128	2132	2136	3089
+queens:	[2287]
+quiet:	[2365]
+quotes:	[2342]
+race:	2276	2373	3164
+radio:	[2004]
+raft:	3994
+ralph:	[3440]
+ray:	[1804]
+razor:	[2881]
+real:	2738	3094	3827	3953
+realized:	4140
+regret:	[3428]
+rehearsal:	4562
+rehearse:	[2771]
+relationship:	[3060]
+relieved:	[[[321]]]
+reminder:	[[739]]
+remodeling:	3776
+repollination:	3806
+report:	[[[[62]]]]	3984
+reporting:	[[866]]
+reports:	[[730]]
+representing:	2525	2532
+rest:	287	290	676	1408	3285
+restricted:	[[699]]
+restroom:	[[[610]]]
+result:	[3294]
+resume:	1006	1102	2752	2856
+returning:	3546
+reverse:	4325	4361
+rhythm:	[[[507]]]
+riding:	[2986]
+rightjob:	[2867]
+ring:	[[1382]]
+rings:	[1385]	2955
+rise:	[2511]
+roaches:	[3234]
+robotics:	[2585]
+roger:	[[823]]
+roller:	[2987]
+rookie:	[[920]]
+rookies:	[[739]]
+root:	[[731]]
+roses:	689	814	820	1702	1710	3699	3718	3719	3722	3725	3731	3737	3786	3787	3810
+rotate:	4349
+royalty:	[2468]
+ruined:	3765
+rum:	[[1282]]
+rumor:	[2163]
+rumors:	[2166]
+runway:	4399
+sale:	[1852]
+san:	[2200]	3568
+sandwich:	[3196]
+sat:	3649
+savages:	[3139]
+saves:	[[[269]]]
+scale:	[2152]
+scared:	776	1098
+scariest:	[[1458]]
+scary:	[[188]]	1466	2347
+scent:	[[[[223]]]]
+schools:	[1848]
+science:	[1789]
+scott:	3923
+scramble:	4513
+screaming:	[2001]
+security:	3818	3886
+select:	[1804]
+semi:	[2099]
+session:	[2522]
+settlement:	[3453]
+seven:	[[648]]
+seventy:	[1785]
+shack:	[[[557]]]
+shake:	[[[[25]]]]
+sharp:	[[[[48]]]]
+shave:	[[[554]]]
+sheep:	[[1375]]
+shenanigans:	[3310]
+shes:	[[237]]	1521	1532	1695	2358
+shirt:	4339
+shorts:	[[776]]
+shouldnt:	1042	1285	4105
+shut:	3520	3521	3524
+shutdown:	[3456]
+shutting:	[3539]
+sides:	[2929]
+silkworm:	[2566]
+simple:	[2547]
+situation:	3953
+skill:	[1112]	2860
+skills:	1030	1108
+slap:	[2072]
+slapping:	[[[433]]]
+slat:	[3377]
+slaves:	[3380]
+sleeping:	3564
+sleeves:	4441
+slogan:	[[1366]]
+smack:	2042	2043
+smell:	2920	2923	4361
+smells:	[[882]]
+smelly:	[3471]
+smoke:	3250	3253	3256	3259	3374
+smoker:	2089	2096	3352
+smoking:	3260	3339	3343	3346	3367
+snack:	[3501]
+snap:	4213	4216	4219	4222	4223	4226	4227	4230	4231
+society:	[[[334]]]
+sole:	[2384]
+soothing:	[[[[226]]]]
+sounds:	[[1454]]
+source:	[2251]
+south:	3665
+special:	[[88]]	1029	1108	1112	2860
+species:	[[298]]	3385	3659	3963	4414
+specifically:	3638
+spider:	[[1507]]
+spiders:	[[1508]]
+spin:	4328
+spitting:	[2692]
+sports:	[2263]	3719
+spot:	[2745]
+spray:	[[973]]
+sprinkle:	[[837]]
+squinty:	[2351]
+squirrel:	[[[[124]]]]
+stall:	3272	3273
+star:	[[1033]]
+starting:	[[[564]]]
+statement:	[1085]	2541
+status:	[[[402]]]	4009
+stealing:	1845	2277
+stellar:	[[[588]]]
+stem:	[[786]]
+steroids:	[2589]
+stick:	[503]	1546	1983
+stickball:	[2314]
+sticks:	[543]	726
+sting:	[[121]]	963	967	1743	1746	2233	2246	2698	2728	2732	3203	3678
+stinger:	[524]	773	2260	2885	3900
+stingers:	[2442]
+stingin:	[[1563]]
+stingings:	[3142]
+stink:	[3472]
+stinks:	[2917]
+stir:	[[[504]]]
+stirrer:	536	539	576	645
+stirring:	[[500]]	1830	2216
+stolen:	2151	2718
+stop:	[[80]]	1064	1594	2159	2217	3527	3886	4546	4551
+stopping:	3883
+stores:	[2314]
+storm:	[2260]	4083
+strand:	[[[265]]]
+straw:	[2069]
+stripe:	[[649]]
+striped:	[786]	3139
+stripes:	[[1297]]
+stripey:	[[1563]]
+strive:	[[[[245]]]]
+students:	[[[[154]]]]
+studio:	[2288]
+stuff:	1039	1334	1888	1948
+stung:	2728	2732	3171
+stunt:	575	645
+suck:	[3151]
+suckers:	[[786]]
+sucking:	4494
+sue:	2276	2310	2373
+sugar:	[2996]
+sugars:	[2412]
+suicide:	3672
+sumner:	[2735]
+sun:	1050	1053
+sunflower:	[456]	659
+supervisor:	[[649]]
+supplier:	[1889]
+support:	[3314]
+supporting:	[2321]
+supposed:	1126	1150	1206
+surface:	4114
+surfs:	[2946]
+surrounded:	[[1706]]
+survive:	4414
+suspenders:	[2336]
+suspenseful:	4062
+suspicion:	3879
+sweater:	[3440]
+sweeteners:	[2997]
+sweetheart:	3861
+sword:	[1904]
+syrup:	[[[[226]]]]
+t:	[3171]
+tacoma:	[1951]
+tail:	4346
+tale:	3861
+tar:	[2100]
+tarmac:	4300
+tattoo:	[[[547]]]
+team:	2505	2811	2814	3171	3285
+technically:	4104
+technology:	[[[[253]]]]
+temper:	[1750]
+tennis:	2354	2845
+tension:	[[979]]
+term:	[2652]
+terrific:	[3332]
+test:	3649
+testing:	[[[[252]]]]
+thatjust:	3679
+thats:	72	136	318	398	523	638	738	845	848	1050	1169	1246	1334	1524	1566	1567	1703	1727	2090	2133	2136	2163	2169	2243	2449	2695	2738	2757	2852	2877	2904	3263	3649	3745	4070	4144	4148	4319	4339	4447
+thems:	[[[583]]]
+theory:	[2169]
+theres:	[492]	686	952	1050	1372	1586	1593	1830	2145	2246	2596	2838	3199	3517	3662	3883	4091
+theyll:	3935
+theyre:	1043	1046	1314	1930	2021	2347	2675	3139	3560	3593	3599	3620	3998
+theyve:	3703	3794	3814	4098
+thiss:	4353
+thomas:	[2093]
+thorax:	[[[553]]]
+throw:	1757	2072	2692
+tight:	[2027]	3818
+timberland:	[2383]
+times:	[[[[184]]]]	4111
+tin:	4261
+tiny:	2001	2767
+tivo:	[1726]
+todays:	[[[565]]]
+toe:	[[1382]]
+tolerate:	[3489]
+tomorrow:	[[457]]	2284
+tooth:	[[[558]]]
+topsy:	[2558]
+total:	3759
+toupee:	3994
+tournament:	1702	1710	3699	3718	3810
+trade:	[2050]
+traffic:	3876
+trained:	[3291]
+tram:	[[[[184]]]]
+travolta:	4047
+treat:	[3138]
+tri:	[2273]
+trickery:	[2596]
+trimmer:	3950
+triple:	1968	1969
+trouble:	1146	1271	1404	2038	2039	4199
+truck:	[2020]
+tub:	[3276]
+tulip:	4501
+tuna:	[3196]
+turmoil:	[2756]
+turns:	4181
+turtle:	[[1378]]
+turvy:	[2558]
+tv:	[1477]	1726
+tweezers:	[3049]
+uh:	[1961]
+unbelievable:	[[980]]
+uncle:	3567
+unconscious:	3998	4019
+understands:	[[1550]]
+unfortunately:	[2611]
+unholy:	[3424]
+unnecessary:	[3496]
+upset:	[1897]
+using:	[2582]
+v:	[2519]
+vacations:	[[[[136]]]]
+valiant:	[[[[215]]]]
+valuable:	2911	3306
+value:	1081	1084	1088
+van:	[2910]
+vanderhayden:	[2636]
+vanessa:	1115	1118	1528	1665	3404	3692	3695	3711	3728	3824	3983	4012	4037	4212	4308
+vannie:	4505
+vegetables:	3646
+venom:	[3130]
+ventriloquism:	[2585]
+versus:	[3164]
+vibram:	[2384]
+victory:	[3452]	4067
+virtually:	4562
+visual:	814	859
+vogue:	1792	2901
+wait:	352	543	862	1064	1070	1235	3076	3479	3722	3969	4054	4173	4282
+waits:	[2475]
+walls:	[2125]
+wanna:	3711
+warming:	[[1057]]
+wars:	[[1033]]
+washers:	[[1545]]
+washington:	[1986]
+wasnt:	[450]	1213
+wasp:	1503	1504
+waste:	[[[124]]]	2831
+watch:	723	1662	1750	2775
+water:	2929	2949	3935
+watermelon:	1324	1328
+weakness:	[2355]
+wearing:	406	407	2932	3437
+weave:	[3034]
+wed:	[1251]	2310	3057
+weekend:	3703
+weird:	[[1220]]
+weve:	[659]	3448	3521	3795
+whassup:	[2007]
+whatd:	[[[587]]]	3956
+whats:	294	313	607	1033	2118	2501	2900	3556	3604	4009
+whatsoever:	[2227]
+wheres:	4016
+wherever:	[2020]
+whos:	[1889]	3970	4030	4462	4510
+wilting:	3620
+win:	2745	3228
+winged:	[3135]
+wipe:	[1939]
+wiper:	[1968]
+witness:	[2633]
+wizardry:	[2579]
+womens:	[2133]
+won:	[3404]
+wonder:	[187]	380	1042
+wont:	[967]	2464	3420
+wooden:	[3377]
+woods:	[3476]
+working:	[1622]	2391	4145	4458
+works:	[2209]
+worry:	[3041]
+wouldnt:	[[1525]]	3549	3575
+wow:	201	204	310	356	591	792	807	979	2017
+wrangler:	[[652]]
+wrap:	4559
+y:	[[889]]
+yall:	2068	3111
+yeah:	[113]	366	428	453	572	762	886	1224	1247	1337	1394	1404	1421	1722	1767	1781	2121	2383	2439	2842	2888	3030	3093	3179	3553	4437	4444
+yearning:	1590	1593	1594
+yell:	1669	1675	4195
+yelling:	[[1672]]	4198
+yesterday:	[696]	3170
+yogi:	[2678]
+yogurt:	[1118]	2394	2400	2983
+york:	[2518]	3927	4013
+youll:	286	297	304	1885	2622	3428
+youre:	[244]	376	377	406	465	489	535	539	615	679	866	943	1150	1181	1185	1203	1375	1535	1541	1630	1877	1900	1936	2046	2124	2432	2525	2532	2753	2788	2845	2863	2942	2980	3104	3189	3276	4509
+yourjob:	[[1490]]
+yours:	[583]	1081
+youve:	1788	1848	2706	3033	3276	4434
+yowser:	[[946]]
