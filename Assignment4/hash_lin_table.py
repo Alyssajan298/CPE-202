@@ -50,17 +50,10 @@ class HashTableLinPr(object):
         Checks if Key is Contained
         """
         index = self.myhash(key, self.tsize)
-        original = self.myhash(key, self.tsize)
-        hashsize = self.tsize
-        searchlist = self.hashlist
-        while index < hashsize:
-            if searchlist[index] is not None:
-                if (searchlist[index])[0] == key:
-                    return True
-            index += 1
+        while self.hashlist[index] != None and self.hashlist[index][0] != key:
+            index +=1 
             index %= self.tsize
-            if index == original:
-                return False
+        return self.hashlist[index] != None and self.hashlist[index][0] == key       
 
     def get_lines(self, key):
         """
