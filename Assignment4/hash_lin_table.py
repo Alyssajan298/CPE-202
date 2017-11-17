@@ -23,7 +23,7 @@ class HashTableLinPr(object):
         """
         Insert Function that takes a key and item
         """
-        if self.get_load_fact() + 1/self.tsize > 0.5:
+        if (self.get_load_fact()+1) / self.tsize > 0.5:
             self.rehash()
         index = self.myhash(key, self.tsize)
         i = 0
@@ -31,7 +31,7 @@ class HashTableLinPr(object):
             if self.duplicate(key):
                 while i < len(self.hashlist):
                     if self.hashlist[i] is not None:
-                        if self.hashlist[i][0] == key:
+                        if self.hashlist[i][0] == key and item not in self.hashlist[i][1]:
                             self.hashlist[i][1].append(item)
                             break
                     i += 1
@@ -47,6 +47,14 @@ class HashTableLinPr(object):
                 index %= self.tsize
             self.hashlist[index] = (key, None)
         self.count += 1
+    
+    def notsamedata(self, pair, item):
+        bools = True
+        for dupedata in pair[1]:
+            if dupedata == item:
+                bools = False
+                break
+        return bools
 
     def duplicate(self, key):
         """
@@ -123,7 +131,7 @@ class HashTableLinPr(object):
             self.hashlist.append(None)
         for pair in oldhash:
             if pair is None:
-                continue
+                pass
             elif pair[1] is None:
                 self.insert(pair[0], None)
             elif len(pair[1]) > 1:
@@ -136,7 +144,7 @@ class HashTableLinPr(object):
         """
         Read Stop Words and Hashes into Table
         """
-        f = open(filename, 'r')
+        f = open(filename)
         while True:
             word = f.readline()
             if word:
@@ -164,7 +172,7 @@ class HashTableLinPr(object):
             elif character in string.ascii_letters or character in string.digits:
                 word = word + character
                 skip = False
-            elif not skip:
+            elif not skip or character is '\n':
                 skip = True
                 self.decide_to_insert_conditionally(word, stoptable, num)
                 if character is '\n':
@@ -174,10 +182,12 @@ class HashTableLinPr(object):
         f.close()
 
     def decide_to_insert_conditionally(self, word, stoptable, num):
+        if len(word) is 0:
+            return
         try:
             float(word)
         except:
-            if stoptable is None or not stoptable.contains(word):
+            if stoptable is None or not stoptable.contains(word.lower()):
                 self.insert(word.lower(), num)
 
     def get_tablesize(self):
