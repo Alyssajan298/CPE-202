@@ -179,7 +179,7 @@ class HashTableLinPr(object):
         try:
             float(word)
         except:
-            if stoptable is None or not stoptable.contains(word):
+            if stoptable is None or not stoptable.contains(word.lower()):
                 self.insert(word.lower(), num)
 
     def get_tablesize(self):
