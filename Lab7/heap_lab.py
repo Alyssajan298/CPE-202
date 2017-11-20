@@ -19,7 +19,7 @@ class MaxHeap(object):
         Insert an element. Returns True/False
         if the insert is successful.
         """
-        if self.size == len(self.heaplist):
+        if self.size == len(self.heaplist)-1:
             return False
         self.size += 1
         self.heaplist[self.size] = item
@@ -103,10 +103,10 @@ class MaxHeap(object):
         elements in Heap down.
         """
         current = self.heaplist[i]
-        firstchild = self.heaplist[i * 2]
-        secondchild = self.heaplist[i * 2 + 1]
-       # if current <= firstchild or current <= secondchild:
-        while self.qualify(current, i * 2, i * 2 + 1):
+        if i * 2 < len(self.heaplist) and i * 2 + 1 < len(self.heaplist):
+            firstchild = self.heaplist[i * 2]
+            secondchild = self.heaplist[i * 2 + 1]
+        while (i * 2 <= len(self.heaplist) and i * 2 + 1 <= len(self.heaplist)) and self.qualify(current, i * 2, i * 2 + 1):
             if secondchild == None:
                 temp = self.heaplist[i * 2]
                 self.heaplist[i * 2] = self.heaplist[i]
@@ -118,31 +118,37 @@ class MaxHeap(object):
                 self.heaplist[i] = temp
                 i = i * 2
                 current = self.heaplist[i]
-                firstchild = self.heaplist[i * 2]
-                secondchild = self.heaplist[i * 2 + 1]
+                if i * 2 < len(self.heaplist):
+                    firstchild = self.heaplist[i * 2]
+                if i * 2 + 1 < len(self.heaplist):
+                    secondchild = self.heaplist[i * 2 + 1]
             else:
                 temp = self.heaplist[i * 2 + 1]
                 self.heaplist[i * 2 + 1] = self.heaplist[i]
                 self.heaplist[i] = temp
                 i = i * 2 + 1
                 current = self.heaplist[i]
-                firstchild = self.heaplist[i * 2]
-                secondchild = self.heaplist[i * 2 + 1]
+                if i * 2 < len(self.heaplist):
+                    firstchild = self.heaplist[i * 2]
+                if i * 2 + 1 < len(self.heaplist):
+                    secondchild = self.heaplist[i * 2 + 1]
 
     def qualify(self, current, child1, child2):
         """
         Helper Function for perc_down
         """
-        if self.heaplist[child1] is not None and self.heaplist[child2] is None:
-            if child1 <= self.size:
-                if current <= self.heaplist[child1]:
-                    return True
-        elif self.heaplist[child1] is not None and self.heaplist[child2] is not None:
-            if child1 <= self.size and child2 <= self.size:
-                if current <= self.heaplist[child1] or current <= self.heaplist[child2]:
-                    return True
-        else:
-            return False
+        if child1 < len(self.heaplist) and child2 < len(self.heaplist):
+            if self.heaplist[child1] is not None and self.heaplist[child2] is None:
+                if child1 <= self.size:
+                    if current <= self.heaplist[child1]:
+                        return True
+            elif self.heaplist[child1] is not None and self.heaplist[child2] is not None:
+                if child1 <= self.size and child2 <= self.size:
+                    if current <= self.heaplist[child1] or current <= self.heaplist[child2]:
+                        return True
+            else:
+                return False
+        return False
 
     def perc_up(self, i):
         """
