@@ -42,12 +42,25 @@ class testing_heaps(unittest.TestCase):
 		self.assertListEqual(mg.conn_components(),[[1,2,3],[4,6,7,8],[5]])
 
 		
-	# def test_given_1_bic(self):
-	# 	mg = MyGraph('i1.txt')
-	# 	self.assertTrue(mg.bicolor())
-	# def test_given_2_bic(self):
-	# 	mg = MyGraph('i2.txt')
-	# 	self.assertFalse(mg.bicolor())
+	def test_given_1_bic(self):
+		mg = MyGraph('i1.txt')
+		self.assertTrue(mg.bicolor())
+	
+	def test_kearn_1_bic(self):
+		mg = MyGraph('kearn.txt')
+		self.assertTrue(mg.bicolor())
+	
+	def test_big7_2_bic(self):
+		mg = MyGraph('big7.txt')
+		self.assertFalse(mg.bicolor())
+
+	def test_test_2_bic(self):
+		mg = MyGraph('test.txt')
+		self.assertFalse(mg.bicolor())
+
+	def test_given_2_bic(self):
+		mg = MyGraph('i2.txt')
+		self.assertFalse(mg.bicolor())
 
 
 if __name__ == "__main__":
